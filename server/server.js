@@ -80,6 +80,7 @@ app.use('/api/certifications', require('./routes/certificationRoutes'));
 app.use('/api/education', require('./routes/educationRoutes'));
 app.use('/api/contact', require('./routes/contactRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
+app.use('/api/github', require('./routes/githubRoutes'));
 
 // Serve frontend in production if built
 if (process.env.NODE_ENV === 'production') {
