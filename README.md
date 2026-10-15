@@ -34,7 +34,8 @@ The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certif
 ---
 
 ## 🌐 Live Demo & Repositories
-- **GitHub Repository**: [https://github.com/Anji0522/siddam-anjaiah-portfolio](https://github.com/Anji0522)
+- **Live Portfolio Website**: [https://anji0522.github.io/siddam-anjaiah-portfolio/](https://anji0522.github.io/siddam-anjaiah-portfolio/)
+- **GitHub Repository**: [https://github.com/Anji0522/siddam-anjaiah-portfolio](https://github.com/Anji0522/siddam-anjaiah-portfolio)
 - **LinkedIn Profile**: [https://www.linkedin.com/in/siddam-anjaiah/](https://www.linkedin.com/in/siddam-anjaiah/)
 - **ServiceNest Live Demo**: [https://anji0522.github.io/ServiceNest/](https://anji0522.github.io/ServiceNest/)
 - **Book Hub Live Demo**: [https://anji0522.github.io/bookhub/](https://anji0522.github.io/bookhub/)
