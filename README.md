@@ -48,7 +48,7 @@ The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certif
 - **True MERN Architecture**: React client communicates with Express REST endpoints backed by MongoDB / Mongoose models.
 - **Admin JWT Authentication**: Secure bcrypt password encryption and HS256 JWT tokens guarding admin dashboard routes (`/admin/dashboard`).
 - **Interactive Admin Dashboard**: Full CRUD management over Projects, Skills, Certifications, Profile metadata, and inbound Contact Messages.
-- **Live GitHub Integration**: Direct synchronization with `https://api.github.com/users/Anji0522/repos` featuring loading spinners, error boundaries, empty states, and retry actions.
+- **Live GitHub Synchronization & Diff Engine**: Direct real-time synchronization with `https://api.github.com/users/Anji0522/repos` that automatically detects when any repository is **added, updated, or deleted** on GitHub. Features 60-second background polling, automatic re-check on browser tab focus, animated diff notification alerts, relative timestamps ("Updated 5m ago"), and new repo highlight badges.
 - **Dynamic Filter & Search System**: Instant multi-criteria filtering across categories (Full-Stack, Frontend, Backend) and individual technologies with alphabetical and date sorting.
 - **Verified Official Resume Viewer**: Embedded 1-page PDF viewer with direct in-browser inspection and one-click PDF downloading.
 - **NxtWave Verified Certifications**: Direct links to official CCBP 4.0 Academy certificate verification credentials.
