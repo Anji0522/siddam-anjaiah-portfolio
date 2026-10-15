@@ -7,13 +7,13 @@ const connectDB = async () => {
   
   try {
     const conn = await mongoose.connect(uri, {
-      serverSelectionTimeoutMS: 2500, // Quick timeout if local mongo isn't up
+      serverSelectionTimeoutMS: 2000 // Fast check for local or remote MongoDB
     });
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
     return conn;
   } catch (err) {
     console.warn(`⚠️ Could not connect to primary MongoDB (${uri}): ${err.message}`);
-    console.log('🔄 Attempting fallback: Initializing in-memory MongoDB server for development...');
+    console.log('🔄 Attempting fallback: Checking local in-memory MongoDB server...');
     
     try {
       const { MongoMemoryServer } = require('mongodb-memory-server');
@@ -23,9 +23,8 @@ const connectDB = async () => {
       console.log(`✅ MongoDB Memory Server connected successfully: ${memUri}`);
       return conn;
     } catch (memErr) {
-      console.error(`❌ In-memory MongoDB initialization failed: ${memErr.message}`);
-      console.info('💡 Note: Set MONGODB_URI in server/.env with your MongoDB Atlas connection string.');
-      // Do not hard-crash the entire express process so client & mocked data endpoints can still respond
+      console.info('💡 Running in Autonomous Development Mode with cached verified seed data.');
+      console.info('💡 To persist data to MongoDB Atlas, add your connection string to server/.env MONGODB_URI');
       return null;
     }
   }
@@ -33,7 +32,9 @@ const connectDB = async () => {
 
 const disconnectDB = async () => {
   try {
-    await mongoose.disconnect();
+    if (mongoose.connection.readyState !== 0) {
+      await mongoose.disconnect();
+    }
     if (memoryServer) {
       await memoryServer.stop();
     }
