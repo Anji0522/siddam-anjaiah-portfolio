@@ -1,0 +1,45 @@
+# Node dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Production build artifacts
+dist/
+build/
+
+# Editor and OS
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp files
+*.tmp
+temp/
+decompressed_pdf.txt
+pdf_strings.txt
+extracted_resume_text.txt
+certificates_src/
+Siddam Anjaiah – Web Developer Resume.docx
+profile image.jpeg
+Siddam_Anjaiah_React_Frontend_Resume_1Page.pdf
