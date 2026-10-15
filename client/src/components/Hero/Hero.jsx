@@ -13,6 +13,7 @@ import {
   FaCheckCircle
 } from 'react-icons/fa';
 import { SiJavascript, SiMongodb } from 'react-icons/si';
+import defaultProfileImg from '../../assets/profile-image.jpeg';
 import './Hero.css';
 
 const Hero = ({ profile }) => {
@@ -131,18 +132,10 @@ const Hero = ({ profile }) => {
             {/* Ambient Profile Frame */}
             <div className="profile-image-container">
               <img
-                src={profile?.profileImage || '/assets/profile-image.jpeg'}
+                src={defaultProfileImg}
                 alt="Siddam Anjaiah - React Frontend Developer"
                 className="profile-photo"
-                onError={(e) => {
-                  // Fallback to dev avatar if image fails to load
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
               />
-              <div className="avatar-fallback" style={{ display: 'none' }}>
-                <span className="avatar-letters">SA</span>
-              </div>
               <div className="profile-badge-verified">
                 <FaCheckCircle className="check-icon" />
                 <span>Verified Full-Stack</span>
