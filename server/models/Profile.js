@@ -10,7 +10,7 @@ const ProfileSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
-      default: 'React Frontend Developer | Full-Stack Developer'
+      default: 'React Frontend Developer | Junior Full Stack (React + Node.js)'
     },
     subtitle: {
       type: String,
@@ -51,7 +51,7 @@ const ProfileSchema = new mongoose.Schema(
     },
     resumeUrl: {
       type: String,
-      default: '/assets/Siddam_Anjaiah_React_Frontend_Resume_1Page.pdf'
+      default: '/assets/Siddam_Anjaiah_React_Frontend_Resume.pdf'
     },
     profileImage: {
       type: String,
@@ -102,9 +102,9 @@ const ProfileSchema = new mongoose.Schema(
       ]
     },
     stats: {
-      apiApps: { type: String, default: '4+' },
-      restApis: { type: String, default: '11' },
-      projectsCount: { type: String, default: '5' },
+      apiApps: { type: String, default: '5+' },
+      restApis: { type: String, default: '15+' },
+      projectsCount: { type: String, default: '7' },
       architecture: { type: String, default: 'MERN' }
     }
   },

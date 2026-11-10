@@ -17,7 +17,7 @@ import defaultProfileImg from '../../assets/profile-image.jpeg';
 import './Hero.css';
 
 const Hero = ({ profile }) => {
-  const resumeUrl = profile?.resumeUrl || '/assets/Siddam_Anjaiah_React_Frontend_Resume_1Page.pdf';
+  const resumeUrl = profile?.resumeUrl || '/assets/Siddam_Anjaiah_React_Frontend_Resume.pdf';
 
   return (
     <section className="hero-section" aria-label="Introduction Hero">
@@ -43,7 +43,7 @@ const Hero = ({ profile }) => {
           </h1>
 
           <h2 className="hero-subtitle-role">
-            React Frontend Developer <span className="role-divider">|</span> Full-Stack Developer
+            React Frontend Developer <span className="role-divider">|</span> Junior Full Stack (React + Node.js)
           </h2>
 
           <p className="hero-description">

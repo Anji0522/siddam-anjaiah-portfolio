@@ -57,9 +57,18 @@ export const api = {
       return await res.json();
     } catch (err) {
       console.warn('API getProjectById fallback triggered:', err.message);
-      const proj = defaultProjects.find(
-        (p) => p.slug === id.toLowerCase() || p.title.toLowerCase() === id.toLowerCase()
-      );
+      const cleanId = id.toLowerCase().replace(/[-_\s]/g, '');
+      const proj = defaultProjects.find((p) => {
+        const cleanSlug = (p.slug || '').toLowerCase().replace(/[-_\s]/g, '');
+        const cleanTitle = (p.title || '').toLowerCase().replace(/[-_\s]/g, '');
+        return (
+          p._id === id ||
+          p.slug === id.toLowerCase() ||
+          cleanSlug === cleanId ||
+          cleanTitle === cleanId ||
+          (cleanId === 'mobilesite' && cleanSlug === 'mobiverseindia')
+        );
+      });
       if (proj) return { success: true, data: proj };
       throw err;
     }
@@ -254,21 +263,26 @@ export const api = {
 // Fallback defaults matching resume and prompt
 export const defaultProfile = {
   name: 'Siddam Anjaiah',
-  title: 'React Frontend Developer | Full-Stack Developer',
+  title: 'React Frontend Developer | Junior Full Stack (React + Node.js)',
   subtitle:
     'Building responsive, accessible and user-focused web applications with React, JavaScript and modern full-stack technologies.',
   summary:
-    'I am a React frontend developer who has built and deployed REST API driven applications including Book Hub, Jobby App, Nxt Watch, and ServiceNest. I also built a Node.js and Express backend with 11 REST APIs. My technical strengths include JWT authentication, protected routing, React Hooks, Context API, responsive design, light and dark theming, semantic HTML, accessible markup, REST API integration, and full-stack development.',
+    'Entry-level React developer who has built and deployed four REST API-driven applications, including ServiceNest, a full-stack service marketplace with a React frontend, Node.js/Express API, SQLite database, JWT authentication and Razorpay payments. Strong in React Hooks, Context API, protected routing, responsive design and accessible, test-ready markup (React Testing Library). Seeking a Junior React Developer, Frontend Developer or Junior Full Stack role.',
   objective:
-    'I am seeking a React Developer or Frontend Developer opportunity where I can apply my React, JavaScript, REST API and full-stack development skills while continuing to grow as a software developer.',
+    'Seeking a Junior React Developer, Frontend Developer or Junior Full Stack role where I can apply my React, JavaScript, REST API and full-stack development skills while contributing to high-impact products and growing as a software engineer.',
   email: 'anjisiddam01@gmail.com',
   phone: '9390098364',
-  location: 'Mancherial, Telangana, India',
+  location: 'Mancherial, Telangana | Open to relocate: Hyderabad, Bengaluru, Chennai',
   github: 'https://github.com/Anji0522',
   linkedin: 'https://www.linkedin.com/in/siddam-anjaiah/',
-  resumeUrl: '/assets/Siddam_Anjaiah_React_Frontend_Resume_1Page.pdf',
+  resumeUrl: '/assets/Siddam_Anjaiah_React_Frontend_Resume.pdf',
   profileImage: '/assets/profile-image.jpeg',
-  targetRoles: ['React Developer', 'Frontend Developer', 'Full-Stack Developer', 'Junior Software Developer'],
+  targetRoles: [
+    'Junior React Developer',
+    'Frontend Developer',
+    'Junior Full Stack (React + Node.js)',
+    'React Developer'
+  ],
   strengths: [
     'Problem Solving',
     'Continuous Learning',
@@ -301,10 +315,10 @@ export const defaultProfile = {
     'Problem Solving'
   ],
   stats: {
-    apiApps: '4+',
-    restApis: '11',
-    projectsCount: '5',
-    architecture: 'MERN'
+    apiApps: '8+',
+    restApis: '25+',
+    projectsCount: '11',
+    architecture: 'MERN & PERN'
   }
 };
 
@@ -338,7 +352,7 @@ export const defaultProjects = [
       'Automated CI/CD with GitHub Actions, deployed on Render & GitHub Pages'
     ],
     image: '/assets/projects/servicenest.png',
-    githubUrl: 'https://github.com/Anji0522',
+    githubUrl: 'https://github.com/Anji0522/ServiceNest',
     liveUrl: 'https://anji0522.github.io/ServiceNest/',
     featured: true,
     category: 'Full-Stack',
@@ -367,6 +381,54 @@ export const defaultProjects = [
   },
   {
     _id: 'proj-2',
+    title: 'MobiVerse India',
+    slug: 'mobiverse-india',
+    subtitle: 'Production-Quality MERN Marketplace for Mobiles & Accessories',
+    description:
+      'High-performance MERN marketplace featuring 116+ smartphones, 696+ accessories, 4-way spec comparison, doorstep repair bookings, trade-in valuations, and Razorpay payments.',
+    longDescription:
+      'MobiVerse India is a production-quality, high-performance MERN marketplace where Indian consumers can browse, compare, and purchase smartphones and accessories officially sold in India. It also connects buyers with authorized service providers for doorstep repairs, screen replacements, and verified trade-ins. Built with React 18, Vite, Express, and MongoDB with Razorpay payment integration.',
+    problemSolved:
+      'Shopping for smartphones in India is fragmented across disparate platforms without localized specs (Indian 5G bands, AnTuTu scores, GST invoices) or trustworthy repair booking options. MobiVerse India unifies transparent specs, dynamic multi-device comparison, verified doorstep repair scheduling, and instant trade-in valuation into one platform.',
+    technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'Razorpay', 'Surge'],
+    features: [
+      '116+ real verified Indian smartphones across 15+ brands with 696+ compatible accessories',
+      'Accurate Indian specs: display refresh rate, AnTuTu benchmarks, 5G band support (n28, n78)',
+      'Multi-device comparison table for up to 4 phones side-by-side with sticky headers and diff highlighting',
+      'Persistent shopping cart with dynamic Indian 18% GST breakdown and free delivery thresholds',
+      'Doorstep repair booking flow with live price estimation for screen and battery replacements',
+      'Certified trade-in valuation engine calculating real-time exchange discounts',
+      'PCI-DSS compliant Razorpay hosted checkout supporting UPI, Cards, Net Banking, and COD',
+      'Automated price-drop tracking and price history alerts across models',
+      'Deployed to Surge with GitHub Actions automated CI/CD pipeline'
+    ],
+    image: '/assets/projects/mobiverse.png',
+    githubUrl: 'https://github.com/Anji0522/mobileSite',
+    liveUrl: 'https://mobiverse-india.surge.sh',
+    featured: false,
+    category: 'Full-Stack',
+    frontendArchitecture:
+      'Architected with React 18, Vite, and custom CSS Design Tokens with CSS Grid and Flexbox layouts. Implemented multi-criteria device filtering, debounced search, comparison drawer state, and cart persistence.',
+    backendArchitecture:
+      'Express.js RESTful API backed by MongoDB / Mongoose with role-based access control, rate limiting, and Razorpay webhook validation.',
+    apis: [
+      'GET /api/v1/products - Smartphone and accessory catalogue with brand and price filters',
+      'GET /api/v1/products/:id - Detailed product specification and compatible accessories',
+      'POST /api/v1/repairs/book - Doorstep service repair scheduling and estimation',
+      'POST /api/v1/trade-in/estimate - Algorithmic device valuation based on physical condition',
+      'POST /api/v1/orders/checkout - Razorpay order creation and payment verification'
+    ],
+    authentication: 'JWT token authorization with role-based access control (Customer, Service Provider, Admin).',
+    database: 'MongoDB with Mongoose schemas for products, accessories, repair bookings, orders, and price history.',
+    deployment: 'Frontend deployed to Surge with automated GitHub Actions CI; backend and database on MongoDB Atlas.',
+    challenges:
+      'Designing a dynamic comparison matrix that accurately aligns heterogeneous device specs across 4 items simultaneously and managing complex trade-in valuation formulas.',
+    whatILearned:
+      'Gained advanced mastery in building large-scale e-commerce architectures, multi-entity catalog schemas, repair workflow scheduling, and payment webhook security.',
+    order: 2
+  },
+  {
+    _id: 'proj-3',
     title: 'Book Hub',
     slug: 'book-hub',
     subtitle: 'Book Discovery Web Application with Cookie-Based JWT Authentication',
@@ -387,7 +449,7 @@ export const defaultProjects = [
       'Passed strict React Testing Library suites for semantic markup and test IDs'
     ],
     image: '/assets/projects/bookhub.png',
-    githubUrl: 'https://github.com/Anji0522',
+    githubUrl: 'https://github.com/Anji0522/bookhub',
     liveUrl: 'https://anji0522.github.io/bookhub/',
     featured: false,
     category: 'Frontend',
@@ -407,10 +469,10 @@ export const defaultProjects = [
       'Fine-tuning react-slick slider responsiveness across varying breakpoints and satisfying stringent React Testing Library timing and accessibility expectations.',
     whatILearned:
       'Gained deep experience with cookie-based session management, complex asynchronous UI states, and writing accessible, easily testable React components.',
-    order: 2
+    order: 3
   },
   {
-    _id: 'proj-3',
+    _id: 'proj-4',
     title: 'Jobby App',
     slug: 'jobby-app',
     subtitle: 'Job Search Application with Combined Multi-Criteria Filtering',
@@ -431,7 +493,7 @@ export const defaultProjects = [
       'Strict accessibility compliance with semantic HTML and data-testid attributes'
     ],
     image: '/assets/projects/jobbyapp.png',
-    githubUrl: 'https://github.com/Anji0522',
+    githubUrl: 'https://github.com/Anji0522/JobbyApp',
     liveUrl: 'https://anji0522.github.io/JobbyApp/',
     featured: false,
     category: 'Frontend',
@@ -451,10 +513,10 @@ export const defaultProjects = [
       'Merging disparate filter components (checkbox arrays, radio values, debounced search strings) into a clean, reactive query string without triggering race conditions.',
     whatILearned:
       'Advanced query string orchestration, handling multiple concurrent API calls (Profile + Jobs), and robust error boundary patterns.',
-    order: 3
+    order: 4
   },
   {
-    _id: 'proj-4',
+    _id: 'proj-5',
     title: 'Nxt Watch',
     slug: 'nxt-watch',
     subtitle: 'Video Streaming Application with Dynamic Light/Dark Theming',
@@ -478,7 +540,7 @@ export const defaultProjects = [
       'Full responsive design optimized for mobile, tablet, and desktop screens'
     ],
     image: '/assets/projects/nxtwatch.png',
-    githubUrl: 'https://github.com/Anji0522',
+    githubUrl: 'https://github.com/Anji0522/NxtWatch',
     liveUrl: 'https://nxtwatch-anjisiddam01.surge.sh/',
     featured: false,
     category: 'Frontend',
@@ -499,10 +561,10 @@ export const defaultProjects = [
       'Synchronizing the active theme and saved video collection across disparate page routes without unnecessary DOM recalculations.',
     whatILearned:
       'Mastered Styled Components theme theming, React Context design patterns, and handling multimedia playback components in React.',
-    order: 4
+    order: 5
   },
   {
-    _id: 'proj-5',
+    _id: 'proj-6',
     title: 'Twitter Clone — Backend REST API',
     slug: 'twitter-clone-backend',
     subtitle: 'Scalable REST API with Relational SQL Joins, JWT Auth, and Aggregates',
@@ -524,7 +586,7 @@ export const defaultProjects = [
       'Standardized HTTP status codes (200, 400, 401, 404, 500) and structured JSON error responses'
     ],
     image: '/assets/projects/twitterbackend.png',
-    githubUrl: 'https://github.com/Anji0522',
+    githubUrl: 'https://github.com/Anji0522/twitterNodeJS',
     liveUrl: null,
     featured: false,
     category: 'Backend',
@@ -551,7 +613,235 @@ export const defaultProjects = [
       'Writing optimized SQL queries across multiple joined tables to calculate dynamic like and reply counts without causing n+1 query performance bottlenecks.',
     whatILearned:
       'Deepened expertise in relational database modeling, writing complex SQL joins, building custom security middleware, and designing RESTful API contracts.',
-    order: 5
+    order: 6
+  },
+  {
+    _id: 'proj-7',
+    title: 'MERN Developer Portfolio',
+    slug: 'siddam-anjaiah-portfolio',
+    subtitle: 'Full-Stack Portfolio with Live GitHub Sync Engine & Admin CMS',
+    description:
+      'Production MERN developer portfolio engineered with React 18, Express REST APIs, MongoDB Mongoose, live GitHub API synchronization, and admin JWT management.',
+    longDescription:
+      'A production-grade full-stack portfolio built to showcase real-world applications and verified skills. Features a direct live synchronization engine with the GitHub API that detects added, updated, or deleted repositories in real time, a dynamic project filter and search engine, JWT-protected administrative management dashboard, verified resume PDF viewer, and accessible UI with dark/light mode.',
+    problemSolved:
+      'Standard static portfolios become outdated the moment new repositories are created or updated on GitHub. This portfolio solves that with a real-time GitHub sync engine, automatic diff detection, and full-stack administrative CRUD controls.',
+    technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'Framer Motion', 'GitHub Actions'],
+    features: [
+      'Real-time GitHub synchronization with 60-second polling and automatic diff detection',
+      'Interactive search and multi-category filtering (Full-Stack, Frontend, Backend) across technologies',
+      'Admin dashboard secured by bcrypt password encryption and HS256 JWT tokens',
+      'Embedded verified PDF resume viewer with direct in-browser inspection and download',
+      'Dark and Light theme toggle persisted in localStorage and synced with system preferences',
+      'NxtWave CCBP verified certification credentials with official validation links',
+      'Secure contact form with rate-limiting protection and celebratory animations',
+      'Automated GitHub Actions CI/CD deploying directly to GitHub Pages'
+    ],
+    image: '/assets/projects/servicenest.png',
+    githubUrl: 'https://github.com/Anji0522/siddam-anjaiah-portfolio',
+    liveUrl: 'https://anji0522.github.io/siddam-anjaiah-portfolio/',
+    featured: false,
+    category: 'Full-Stack',
+    frontendArchitecture:
+      'Engineered with React 18, Vite, Framer Motion for smooth animations, custom CSS Design Tokens, and HashRouter for seamless GitHub Pages routing.',
+    backendArchitecture:
+      'Express.js RESTful API with Helmet security headers, CORS protection, express-rate-limit, and Mongoose ORM models with in-memory database fallback.',
+    apis: [
+      'GET /api/profile - Developer profile and contact information',
+      'GET /api/projects - Complete project catalogue with category filtering',
+      'GET /api/skills - Categorized technical skills inventory',
+      'POST /api/contact - Validated contact message submission',
+      'POST /api/admin/login - Admin authentication and JWT token issuance'
+    ],
+    authentication: 'JWT authentication with HS256 signing for administrative routes.',
+    database: 'MongoDB with Mongoose schemas and development in-memory fallback.',
+    deployment: 'Frontend automated CI/CD deployment via GitHub Actions to GitHub Pages; backend ready for Render deployment.',
+    challenges:
+      'Implementing zero-downtime database fallback for seamless static deployment while retaining full backend API and admin capabilities.',
+    whatILearned:
+      'End-to-end deployment pipelines, live third-party API synchronization with polling and diffing, and accessible responsive component design.',
+    order: 7
+  },
+  {
+    _id: 'proj-8',
+    title: 'Expense Tracker',
+    slug: 'expense-tracker',
+    subtitle: 'Full-Stack Personal Finance & Budgeting Platform (React + PostgreSQL)',
+    description:
+      'Full-stack personal finance and expense tracker built with React, Node.js, Express, and Neon PostgreSQL featuring budget tracking, transaction analytics, and category breakdowns.',
+    longDescription:
+      'Expense Tracker is a production-ready, full-stack personal finance platform engineered with a React frontend and an Express REST API connected to a Neon cloud PostgreSQL database. It delivers comprehensive financial management with categorized transaction logging, monthly budget targets, recurring expense calculations, and interactive visual analytics powered by Chart.js / Recharts. The application features robust data validation, JWT authentication, and automated database migrations.',
+    problemSolved:
+      'Managing personal finances across disparate apps often results in missing data, lack of visual insight, and clunky interfaces. Expense Tracker provides an intuitive, real-time dashboard that instantly visualizes cash flow, spending trends, and budget adherence.',
+    technologies: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'Neon', 'JWT', 'Chart.js', 'Vercel', 'Render'],
+    features: [
+      'Comprehensive financial dashboard with real-time balance and net savings analytics',
+      'Transaction logging with income, expense, category, date, and receipt attachments',
+      'Monthly budget goals with interactive progress bars and alert thresholds',
+      'Relational PostgreSQL database architecture hosted on Neon Serverless Postgres',
+      'Secure JWT authentication with password hashing and session management',
+      'Responsive design with light/dark theming and accessible data tables',
+      'Production deployment with Frontend on Vercel and REST API on Render'
+    ],
+    image: '/assets/projects/servicenest.png',
+    githubUrl: 'https://github.com/Anji0522/expense-tracker',
+    liveUrl: 'https://expense-tracker-nu-nine-16.vercel.app/',
+    featured: false,
+    category: 'Full-Stack',
+    frontendArchitecture:
+      'Engineered with React, Vite, and modern CSS custom properties. Uses custom hooks for data fetching, responsive data tables, and dynamic chart visualizations.',
+    backendArchitecture:
+      'Layered Node.js and Express REST API architecture with parameterized SQL queries preventing SQL injection, pooled Neon PostgreSQL connections, and error-handling middleware.',
+    apis: [
+      'POST /api/auth/login - User authentication & JWT issuance',
+      'GET /api/transactions - Filtered transaction history by date and category',
+      'POST /api/transactions - Record new income or expense transaction',
+      'GET /api/budgets - Active monthly budget targets and spending progress',
+      'GET /api/analytics/monthly - Aggregated spending data for charts'
+    ],
+    authentication: 'JWT (JSON Web Token) with bearer authorization headers and protected endpoints.',
+    database: 'Neon Serverless PostgreSQL relational database with foreign keys and indexes.',
+    deployment: 'Frontend hosted on Vercel; backend REST API hosted on Render with Neon cloud database.',
+    challenges:
+      'Aggregating transaction totals across diverse categories and date ranges efficiently without creating database bottlenecks.',
+    whatILearned:
+      'Gained deep proficiency in relational SQL query optimization, serverless PostgreSQL pooling, and financial chart visualizations in React.',
+    order: 8
+  },
+  {
+    _id: 'proj-9',
+    title: 'Aurevo Watch Store',
+    slug: 'aurevo-watch-store',
+    subtitle: 'Luxury E-Commerce Storefront with 3D Watch Viewer & Razorpay',
+    description:
+      'Luxury watch e-commerce web application featuring a procedural 3D watch viewer (Three.js / React Three Fiber), wishlist, persistent bag, and Razorpay checkout.',
+    longDescription:
+      'Aurevo is a luxury watch storefront engineered with React 18, React Three Fiber, Three.js, Zustand state management, and Express/MongoDB backend. It allows watch enthusiasts to inspect luxury timepieces through an interactive 3D model viewer, filter watches across movements and materials, manage a persistent shopping bag, and simulate order checkout with Razorpay.',
+    problemSolved:
+      'Standard e-commerce websites offer flat 2D images that fail to communicate the craftsmanship and scale of luxury timepieces. Aurevo solves this by integrating an interactive 3D procedural viewer right into the product catalog.',
+    technologies: ['React 18', 'Three.js', 'React Three Fiber', 'Zustand', 'Node.js', 'Express.js', 'MongoDB', 'Razorpay', 'Vite'],
+    features: [
+      'Interactive procedural 3D timepiece model viewer built with Three.js & React Three Fiber',
+      'Comprehensive 12-watch luxury catalog with movement, water resistance, and material filters',
+      'Persistent shopping bag and interactive wishlist using Zustand global state',
+      'Razorpay payment checkout flow with server-side payment verification',
+      'Detailed product specification view with high-definition assets and review flows',
+      'Automated testing suites with Vitest, React Testing Library, and Playwright'
+    ],
+    image: '/assets/projects/servicenest.png',
+    githubUrl: 'https://github.com/Anji0522/aurevo-watch-store',
+    liveUrl: 'https://anji0522.github.io/aurevo-watch-store/',
+    featured: false,
+    category: 'Full-Stack',
+    frontendArchitecture:
+      'Built with React 18, Vite, Zustand for lightweight state management, and React Three Fiber / Drei for canvas 3D rendering.',
+    backendArchitecture:
+      'Express.js RESTful API backed by MongoDB / Mongoose for watch catalogs, orders, and customer reviews.',
+    apis: [
+      'GET /api/watches - Filtered collection of luxury timepieces',
+      'GET /api/watches/:id - Detailed watch specifications and 3D assets',
+      'POST /api/orders/checkout - Razorpay order creation and validation',
+      'GET /api/reviews/:watchId - Verified customer product reviews'
+    ],
+    authentication: 'JWT session tokens with bcrypt password encryption.',
+    database: 'MongoDB with Mongoose schemas for products, orders, and reviews.',
+    deployment: 'Deployed on GitHub Pages with automated GitHub Actions CI/CD pipeline.',
+    challenges:
+      'Optimizing 3D canvas render performance to maintain 60 FPS on mobile devices while managing complex state in Zustand.',
+    whatILearned:
+      'Mastered 3D graphics integration with React Three Fiber, Zustand store patterns, and end-to-end testing with Vitest and Playwright.',
+    order: 9
+  },
+  {
+    _id: 'proj-10',
+    title: 'LearnHub LMS',
+    slug: 'learnhub-lms',
+    subtitle: 'Online Learning Management System with Course Authoring & Quizzes',
+    description:
+      'Online LMS platform supporting student course enrollment, lesson progress tracking, interactive quizzes, role-based instructor authoring, and admin dashboards.',
+    longDescription:
+      'LearnHub is a full-featured online learning management system built with React, Vite, Node.js, Express, and MongoDB. It features a dual-role architecture: students can discover courses, track module progress, and take assessment quizzes, while instructors can create multi-lesson video curricula, publish course materials, and review student performance analytics through visual charts.',
+    problemSolved:
+      'Education platforms often fail to provide clear progress indicators and accessible course navigation for students, as well as easy curriculum builders for teachers. LearnHub provides a streamlined, accessible interface for both personas.',
+    technologies: ['React 18', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'Recharts', 'Lucide React'],
+    features: [
+      'Student registration, login, and secure session management via HTTP-only cookies',
+      'Course catalog with search, category filtering, and syllabus previews',
+      'Interactive student learning player with lesson completion tracking and quizzes',
+      'Instructor course creation portal with dynamic lesson and quiz builders',
+      'Admin analytics dashboard built with Recharts displaying enrollment trends',
+      'Responsive, accessible layout designed for mobile and desktop learners'
+    ],
+    image: '/assets/projects/servicenest.png',
+    githubUrl: 'https://github.com/Anji0522/learnhub-lms',
+    liveUrl: 'https://anji0522.github.io/learnhub-lms/',
+    featured: false,
+    category: 'Full-Stack',
+    frontendArchitecture:
+      'Modular React 18 architecture with Context API, React Router v6, Lucide icons, and Recharts for student performance visualization.',
+    backendArchitecture:
+      'Express.js backend with Mongoose schemas for users, courses, lessons, enrollments, and quiz submissions.',
+    apis: [
+      'POST /api/auth/register - Student and instructor account creation',
+      'GET /api/courses - Public course catalog and curriculum data',
+      'POST /api/courses - Instructor course creation and publishing',
+      'POST /api/enrollments - Student course enrollment and progress tracking',
+      'POST /api/quizzes/submit - Automated quiz grading and score computation'
+    ],
+    authentication: 'HTTP-only cookie stored JWT tokens with bcrypt password hashing.',
+    database: 'MongoDB database with relational population across courses, lessons, and progress collections.',
+    deployment: 'Frontend deployed to GitHub Pages via automated GitHub Actions; backend configured for Render.',
+    challenges:
+      'Designing flexible MongoDB schemas that support hierarchical course curricula (Courses -> Modules -> Lessons -> Quizzes) with atomic progress tracking.',
+    whatILearned:
+      'Deepened skills in role-based multi-tier systems, cookie security, and nested relational modeling in MongoDB.',
+    order: 10
+  },
+  {
+    _id: 'proj-11',
+    title: 'SocialConnect',
+    slug: 'socialconnect',
+    subtitle: 'Modern MERN Social Networking App with Real-Time Feeds & Socket.io',
+    description:
+      'Instagram-style social networking web application engineered with React 19, Express, MongoDB, Socket.io, and Tailwind CSS featuring live feeds, stories, likes, and messaging.',
+    longDescription:
+      'SocialConnect is a modern MERN social platform designed with React 19, Tailwind CSS, and Socket.io. It recreates rich social media experiences with instant photo/post creation, interactive comments, animated double-tap likes, user profile galleries, follower connections, and real-time private messaging powered by WebSockets.',
+    problemSolved:
+      'Social platforms demand low-latency, real-time interactivity. Standard REST polling introduces network overhead and delayed updates. SocialConnect utilizes Socket.io to deliver instant real-time notifications, live comments, and direct chat messages.',
+    technologies: ['React 19', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Socket.io', 'JWT', 'bcrypt', 'GitHub Actions'],
+    features: [
+      'Dynamic feed with real-time post publication and image uploads',
+      'Double-tap like animations, comment threads, and bookmarking',
+      'Real-time private messaging with typing indicators powered by Socket.io',
+      'User profile management with bio, avatar customization, and follower graph',
+      'Explore section with trending posts and user recommendations',
+      'JWT authentication with bcrypt password security and pre-seeded sandbox credentials',
+      'Automated CI/CD with GitHub Actions deploying directly to GitHub Pages'
+    ],
+    image: '/assets/projects/servicenest.png',
+    githubUrl: 'https://github.com/Anji0522/socialConnect',
+    liveUrl: 'https://anji0522.github.io/socialConnect/',
+    featured: false,
+    category: 'Full-Stack',
+    frontendArchitecture:
+      'Modern React 19 SPA styled with Tailwind CSS, utilizing custom hooks for WebSocket event subscriptions and responsive mobile-first layouts.',
+    backendArchitecture:
+      'Combined Express HTTP server and Socket.io WebSocket server with event-driven message dispatching and MongoDB change streams.',
+    apis: [
+      'POST /api/posts - Create and publish a post with caption and media',
+      'GET /api/feed - Personalized timeline feed from followed creators',
+      'POST /api/posts/:id/like - Toggle post like with instant notification',
+      'POST /api/posts/:id/comments - Add comment to conversation thread',
+      'GET /api/users/:username - User profile details and post showcase'
+    ],
+    authentication: 'HS256 signed JWT tokens verified on both HTTP requests and WebSocket handshakes.',
+    database: 'MongoDB with indexed collections for users, posts, comments, likes, and messages.',
+    deployment: 'Frontend deployed to GitHub Pages with automated CI/CD; backend configured for Render.',
+    challenges:
+      'Synchronizing real-time Socket.io events with React component lifecycles to prevent ghost listeners and duplicate message rendering.',
+    whatILearned:
+      'Mastered WebSocket event architecture, real-time notification dispatching, React 19 concurrency patterns, and modern Tailwind CSS UI development.',
+    order: 11
   }
 ];
 
@@ -678,7 +968,7 @@ export const defaultEducation = [
     institution: 'Vivekavardhini Degree College',
     location: 'Mancherial, Telangana',
     year: '2021 – 2024',
-    score: 'CGPA: 6.63',
+    score: 'CGPA: 6.23',
     details: [
       'Comprehensive study of computer software applications, programming foundations, and information systems',
       'Academic coursework in web technologies, databases, and commercial computing',
@@ -692,7 +982,7 @@ export const defaultEducation = [
     institution: 'TS Model School and Junior College',
     location: 'Mancherial, Telangana',
     year: '2021',
-    score: '50.6%',
+    score: 'Grade: Passed',
     details: [
       'Commerce, Economics, and Civics foundation with analytical problem solving',
       'Completed secondary higher education with consistent academic participation'

@@ -1,24 +1,24 @@
 const seedData = {
   profile: {
     name: 'Siddam Anjaiah',
-    title: 'React Frontend Developer | Full-Stack Developer',
+    title: 'React Frontend Developer | Junior Full Stack (React + Node.js)',
     subtitle: 'Building responsive, accessible and user-focused web applications with React, JavaScript and modern full-stack technologies.',
     summary:
-      'I am a React frontend developer who has built and deployed REST API driven applications including Book Hub, Jobby App, Nxt Watch, and ServiceNest. I also built a Node.js and Express backend with 11 REST APIs. My technical strengths include JWT authentication, protected routing, React Hooks, Context API, responsive design, light and dark theming, semantic HTML, accessible markup, REST API integration, and full-stack development.',
+      'Entry-level React developer who has built and deployed four REST API-driven applications, including ServiceNest, a full-stack service marketplace with a React frontend, Node.js/Express API, SQLite database, JWT authentication and Razorpay payments. Strong in React Hooks, Context API, protected routing, responsive design and accessible, test-ready markup (React Testing Library). Seeking a Junior React Developer, Frontend Developer or Junior Full Stack role.',
     objective:
-      'I am seeking a React Developer or Frontend Developer opportunity where I can apply my React, JavaScript, REST API and full-stack development skills while continuing to grow as a software developer.',
+      'Seeking a Junior React Developer, Frontend Developer or Junior Full Stack role where I can apply my React, JavaScript, REST API and full-stack development skills while contributing to high-impact products and growing as a software engineer.',
     email: 'anjisiddam01@gmail.com',
     phone: '9390098364',
-    location: 'Mancherial, Telangana, India',
+    location: 'Mancherial, Telangana | Open to relocate: Hyderabad, Bengaluru, Chennai',
     github: 'https://github.com/Anji0522',
     linkedin: 'https://www.linkedin.com/in/siddam-anjaiah/',
-    resumeUrl: '/assets/Siddam_Anjaiah_React_Frontend_Resume_1Page.pdf',
+    resumeUrl: '/assets/Siddam_Anjaiah_React_Frontend_Resume.pdf',
     profileImage: '/assets/profile-image.jpeg',
     targetRoles: [
-      'React Developer',
+      'Junior React Developer',
       'Frontend Developer',
-      'Full-Stack Developer',
-      'Junior Software Developer'
+      'Junior Full Stack (React + Node.js)',
+      'React Developer'
     ],
     strengths: [
       'Problem Solving',
@@ -52,9 +52,9 @@ const seedData = {
       'Problem Solving'
     ],
     stats: {
-      apiApps: '4+',
-      restApis: '11',
-      projectsCount: '5',
+      apiApps: '5+',
+      restApis: '15+',
+      projectsCount: '7',
       architecture: 'MERN'
     }
   },
@@ -98,7 +98,7 @@ const seedData = {
         'Automated CI/CD with GitHub Actions, deployed on Render & GitHub Pages'
       ],
       image: '/assets/projects/servicenest.png',
-      githubUrl: 'https://github.com/Anji0522',
+      githubUrl: 'https://github.com/Anji0522/ServiceNest',
       liveUrl: 'https://anji0522.github.io/ServiceNest/',
       featured: true,
       category: 'Full-Stack',
@@ -124,6 +124,53 @@ const seedData = {
       whatILearned:
         'Mastered end-to-end full-stack integration, payment gateway security (HMAC signature verification, webhook replay attack mitigation), role-based middleware architecture, and production CI/CD workflows.',
       order: 1
+    },
+    {
+      title: 'MobiVerse India',
+      slug: 'mobiverse-india',
+      subtitle: 'Production-Quality MERN Marketplace for Mobiles & Accessories',
+      description:
+        'High-performance MERN marketplace featuring 116+ smartphones, 696+ accessories, 4-way spec comparison, doorstep repair bookings, trade-in valuations, and Razorpay payments.',
+      longDescription:
+        'MobiVerse India is a production-quality, high-performance MERN marketplace where Indian consumers can browse, compare, and purchase smartphones and accessories officially sold in India. It also connects buyers with authorized service providers for doorstep repairs, screen replacements, and verified trade-ins. Built with React 18, Vite, Express, and MongoDB with Razorpay payment integration.',
+      problemSolved:
+        'Shopping for smartphones in India is fragmented across disparate platforms without localized specs (Indian 5G bands, AnTuTu scores, GST invoices) or trustworthy repair booking options. MobiVerse India unifies transparent specs, dynamic multi-device comparison, verified doorstep repair scheduling, and instant trade-in valuation into one platform.',
+      technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'Razorpay', 'Surge'],
+      features: [
+        '116+ real verified Indian smartphones across 15+ brands with 696+ compatible accessories',
+        'Accurate Indian specs: display refresh rate, AnTuTu benchmarks, 5G band support (n28, n78)',
+        'Multi-device comparison table for up to 4 phones side-by-side with sticky headers and diff highlighting',
+        'Persistent shopping cart with dynamic Indian 18% GST breakdown and free delivery thresholds',
+        'Doorstep repair booking flow with live price estimation for screen and battery replacements',
+        'Certified trade-in valuation engine calculating real-time exchange discounts',
+        'PCI-DSS compliant Razorpay hosted checkout supporting UPI, Cards, Net Banking, and COD',
+        'Automated price-drop tracking and price history alerts across models',
+        'Deployed to Surge with GitHub Actions automated CI/CD pipeline'
+      ],
+      image: '/assets/projects/mobiverse.png',
+      githubUrl: 'https://github.com/Anji0522/mobileSite',
+      liveUrl: 'https://mobiverse-india.surge.sh',
+      featured: false,
+      category: 'Full-Stack',
+      frontendArchitecture:
+        'Architected with React 18, Vite, and custom CSS Design Tokens with CSS Grid and Flexbox layouts. Implemented multi-criteria device filtering, debounced search, comparison drawer state, and cart persistence.',
+      backendArchitecture:
+        'Express.js RESTful API backed by MongoDB / Mongoose with role-based access control, rate limiting, and Razorpay webhook validation.',
+      apis: [
+        'GET /api/v1/products - Smartphone and accessory catalogue with brand and price filters',
+        'GET /api/v1/products/:id - Detailed product specification and compatible accessories',
+        'POST /api/v1/repairs/book - Doorstep service repair scheduling and estimation',
+        'POST /api/v1/trade-in/estimate - Algorithmic device valuation based on physical condition',
+        'POST /api/v1/orders/checkout - Razorpay order creation and payment verification'
+      ],
+      authentication: 'JWT token authorization with role-based access control (Customer, Service Provider, Admin).',
+      database: 'MongoDB with Mongoose schemas for products, accessories, repair bookings, orders, and price history.',
+      deployment: 'Frontend deployed to Surge with automated GitHub Actions CI; backend and database on MongoDB Atlas.',
+      challenges:
+        'Designing a dynamic comparison matrix that accurately aligns heterogeneous device specs across 4 items simultaneously and managing complex trade-in valuation formulas.',
+      whatILearned:
+        'Gained advanced mastery in building large-scale e-commerce architectures, multi-entity catalog schemas, repair workflow scheduling, and payment webhook security.',
+      order: 2
     },
     {
       title: 'Book Hub',
@@ -153,7 +200,7 @@ const seedData = {
         'Passed strict React Testing Library suites for semantic markup and test IDs'
       ],
       image: '/assets/projects/bookhub.png',
-      githubUrl: 'https://github.com/Anji0522',
+      githubUrl: 'https://github.com/Anji0522/bookhub',
       liveUrl: 'https://anji0522.github.io/bookhub/',
       featured: false,
       category: 'Frontend',
@@ -173,7 +220,7 @@ const seedData = {
         'Fine-tuning react-slick slider responsiveness across varying breakpoints and satisfying stringent React Testing Library timing and accessibility expectations.',
       whatILearned:
         'Gained deep experience with cookie-based session management, complex asynchronous UI states, and writing accessible, easily testable React components.',
-      order: 2
+      order: 3
     },
     {
       title: 'Jobby App',
@@ -202,7 +249,7 @@ const seedData = {
         'Strict accessibility compliance with semantic HTML and data-testid attributes'
       ],
       image: '/assets/projects/jobbyapp.png',
-      githubUrl: 'https://github.com/Anji0522',
+      githubUrl: 'https://github.com/Anji0522/JobbyApp',
       liveUrl: 'https://anji0522.github.io/JobbyApp/',
       featured: false,
       category: 'Frontend',
@@ -222,7 +269,7 @@ const seedData = {
         'Merging disparate filter components (checkbox arrays, radio values, debounced search strings) into a clean, reactive query string without triggering race conditions.',
       whatILearned:
         'Advanced query string orchestration, handling multiple concurrent API calls (Profile + Jobs), and robust error boundary patterns.',
-      order: 3
+      order: 4
     },
     {
       title: 'Nxt Watch',
@@ -257,7 +304,7 @@ const seedData = {
         'Full responsive design optimized for mobile, tablet, and desktop screens'
       ],
       image: '/assets/projects/nxtwatch.png',
-      githubUrl: 'https://github.com/Anji0522',
+      githubUrl: 'https://github.com/Anji0522/NxtWatch',
       liveUrl: 'https://nxtwatch-anjisiddam01.surge.sh/',
       featured: false,
       category: 'Frontend',
@@ -278,7 +325,7 @@ const seedData = {
         'Synchronizing the active theme and saved video collection across disparate page routes without unnecessary DOM recalculations.',
       whatILearned:
         'Mastered Styled Components theme theming, React Context design patterns, and handling multimedia playback components in React.',
-      order: 4
+      order: 5
     },
     {
       title: 'Twitter Clone — Backend REST API',
@@ -309,7 +356,7 @@ const seedData = {
         'Standardized HTTP status codes (200, 400, 401, 404, 500) and structured JSON error responses'
       ],
       image: '/assets/projects/twitterbackend.png',
-      githubUrl: 'https://github.com/Anji0522',
+      githubUrl: 'https://github.com/Anji0522/twitterNodeJS',
       liveUrl: null,
       featured: false,
       category: 'Backend',
@@ -336,7 +383,63 @@ const seedData = {
         'Writing optimized SQL queries across multiple joined tables to calculate dynamic like and reply counts without causing n+1 query performance bottlenecks.',
       whatILearned:
         'Deepened expertise in relational database modeling, writing complex SQL joins, building custom security middleware, and designing RESTful API contracts.',
-      order: 5
+      order: 6
+    },
+    {
+      title: 'MERN Developer Portfolio',
+      slug: 'siddam-anjaiah-portfolio',
+      subtitle: 'Full-Stack Portfolio with Live GitHub Sync Engine & Admin CMS',
+      description:
+        'Production MERN developer portfolio engineered with React 18, Express REST APIs, MongoDB Mongoose, live GitHub API synchronization, and admin JWT management.',
+      longDescription:
+        'A production-grade full-stack portfolio built to showcase real-world applications and verified skills. Features a direct live synchronization engine with the GitHub API that detects added, updated, or deleted repositories in real time, a dynamic project filter and search engine, JWT-protected administrative management dashboard, verified resume PDF viewer, and accessible UI with dark/light mode.',
+      problemSolved:
+        'Standard static portfolios become outdated the moment new repositories are created or updated on GitHub. This portfolio solves that with a real-time GitHub sync engine, automatic diff detection, and full-stack administrative CRUD controls.',
+      technologies: [
+        'React',
+        'Vite',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'Mongoose',
+        'JWT',
+        'Framer Motion',
+        'GitHub Actions'
+      ],
+      features: [
+        'Real-time GitHub synchronization with 60-second polling and automatic diff detection',
+        'Interactive search and multi-category filtering (Full-Stack, Frontend, Backend) across technologies',
+        'Admin dashboard secured by bcrypt password encryption and HS256 JWT tokens',
+        'Embedded verified PDF resume viewer with direct in-browser inspection and download',
+        'Dark and Light theme toggle persisted in localStorage and synced with system preferences',
+        'NxtWave CCBP verified certification credentials with official validation links',
+        'Secure contact form with rate-limiting protection and celebratory animations',
+        'Automated GitHub Actions CI/CD deploying directly to GitHub Pages'
+      ],
+      image: '/assets/projects/servicenest.png',
+      githubUrl: 'https://github.com/Anji0522/siddam-anjaiah-portfolio',
+      liveUrl: 'https://anji0522.github.io/siddam-anjaiah-portfolio/',
+      featured: false,
+      category: 'Full-Stack',
+      frontendArchitecture:
+        'Engineered with React 18, Vite, Framer Motion for smooth animations, custom CSS Design Tokens, and HashRouter for seamless GitHub Pages routing.',
+      backendArchitecture:
+        'Express.js RESTful API with Helmet security headers, CORS protection, express-rate-limit, and Mongoose ORM models with in-memory database fallback.',
+      apis: [
+        'GET /api/profile - Developer profile and contact information',
+        'GET /api/projects - Complete project catalogue with category filtering',
+        'GET /api/skills - Categorized technical skills inventory',
+        'POST /api/contact - Validated contact message submission',
+        'POST /api/admin/login - Admin authentication and JWT token issuance'
+      ],
+      authentication: 'JWT authentication with HS256 signing for administrative routes.',
+      database: 'MongoDB with Mongoose schemas and development in-memory fallback.',
+      deployment: 'Frontend automated CI/CD deployment via GitHub Actions to GitHub Pages; backend ready for Render deployment.',
+      challenges:
+        'Implementing zero-downtime database fallback for seamless static deployment while retaining full backend API and admin capabilities.',
+      whatILearned:
+        'End-to-end deployment pipelines, live third-party API synchronization with polling and diffing, and accessible responsive component design.',
+      order: 7
     }
   ],
 
@@ -467,7 +570,7 @@ const seedData = {
       institution: 'Vivekavardhini Degree College',
       location: 'Mancherial, Telangana',
       year: '2021 – 2024',
-      score: 'CGPA: 6.63',
+      score: 'CGPA: 6.23',
       details: [
         'Comprehensive study of computer software applications, programming foundations, and information systems',
         'Academic coursework in web technologies, databases, and commercial computing',
@@ -480,7 +583,7 @@ const seedData = {
       institution: 'TS Model School and Junior College',
       location: 'Mancherial, Telangana',
       year: '2021',
-      score: '50.6%',
+      score: 'Grade: Passed',
       details: [
         'Commerce, Economics, and Civics foundation with analytical problem solving',
         'Completed secondary higher education with consistent academic participation'

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://anji0522.github.io/sitemap.xml
+Sitemap: https://anji0522.github.io/siddam-anjaiah-portfolio/sitemap.xml

@@ -27,6 +27,11 @@ const GithubRepos = () => {
     if (repo.homepage) return repo.homepage;
     const name = repo.name.toLowerCase();
     if (name === 'servicenest') return 'https://anji0522.github.io/ServiceNest/';
+    if (name === 'mobilesite' || name === 'mobiverse') return 'https://mobiverse-india.surge.sh';
+    if (name === 'expense-tracker') return 'https://expense-tracker-nu-nine-16.vercel.app/';
+    if (name === 'socialconnect') return 'https://anji0522.github.io/socialConnect/';
+    if (name === 'aurevo-watch-store') return 'https://anji0522.github.io/aurevo-watch-store/';
+    if (name === 'learnhub-lms') return 'https://anji0522.github.io/learnhub-lms/';
     if (name === 'bookhub') return 'https://anji0522.github.io/bookhub/';
     if (name === 'jobbyapp') return 'https://anji0522.github.io/JobbyApp/';
     if (name === 'nxtwatch') return 'https://nxtwatch-anjisiddam01.surge.sh/';

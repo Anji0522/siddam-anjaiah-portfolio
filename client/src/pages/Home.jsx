@@ -30,7 +30,7 @@ const Home = () => {
   }, []);
 
   const featuredProject = projects.find((p) => p.featured) || projects[0];
-  const otherProjects = projects.filter((p) => p !== featuredProject).slice(0, 4);
+  const otherProjects = projects.filter((p) => p !== featuredProject);
 
   return (
     <div className="home-page">

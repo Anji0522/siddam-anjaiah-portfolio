@@ -1,12 +1,12 @@
 # Siddam Anjaiah — MERN Developer Portfolio 🚀
 
 [![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-24-green?logo=node.js)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-green?logo=node.js)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express-4.19-lightgrey?logo=express)](https://expressjs.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-brightgreen?logo=mongodb)](https://www.mongodb.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> A production-grade, full-stack **MERN Developer Portfolio** engineered for **Siddam Anjaiah** (React Frontend Developer | Full-Stack Developer). Built to showcase real-world REST API-driven single page applications, full-stack architectures, protected routing, and backend systems.
+> A production-grade, full-stack **Developer Portfolio** engineered for **Siddam Anjaiah** (React Frontend Developer | Junior Full Stack [React + Node.js]). Built to showcase real-world REST API-driven single-page applications, full-stack marketplaces, protected routing, real-time GitHub synchronization, and backend systems.
 
 ---
 
@@ -27,36 +27,46 @@
 ---
 
 ## 📖 About the Project
-This application is not a static template. It is a complete, production-ready full-stack MERN application connecting a high-performance **React (Vite)** client to an **Express.js & Node.js** API server with a **MongoDB (Mongoose)** database.
+This application is not a static template. It is a complete, production-ready full-stack application connecting a high-performance **React 18 (Vite)** client to an **Express.js & Node.js** API server with a **MongoDB (Mongoose)** database.
 
-The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certifications, Education, and Contact Messages) through structured REST APIs, while enabling verified administrative management with JWT authentication and password hashing.
+The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certifications, Education, and Contact Messages) through structured REST APIs, while enabling verified administrative management with JWT authentication and bcrypt password hashing. It also features a real-time live synchronization engine that continuously checks the GitHub API for user `Anji0522` and reflects changes dynamically.
 
 ---
 
 ## 🌐 Live Demo & Repositories
-- **Live Portfolio Website**: [https://anji0522.github.io/siddam-anjaiah-portfolio/](https://anji0522.github.io/siddam-anjaiah-portfolio/)
-- **GitHub Repository**: [https://github.com/Anji0522/siddam-anjaiah-portfolio](https://github.com/Anji0522/siddam-anjaiah-portfolio)
+
+| Project Name | Category | Live Production Demo | GitHub Source Code |
+| :--- | :--- | :--- | :--- |
+| 🚀 **Portfolio Website** | Full-Stack | **[Live Website](https://anji0522.github.io/siddam-anjaiah-portfolio/)** | [GitHub Repo](https://github.com/Anji0522/siddam-anjaiah-portfolio) |
+| 💰 **Expense Tracker** | Full-Stack (PostgreSQL) | **[Live Demo](https://expense-tracker-nu-nine-16.vercel.app/)** | [GitHub Repo](https://github.com/Anji0522/expense-tracker) |
+| ⌚ **Aurevo Watch Store** | 3D MERN Storefront | **[Live Demo](https://anji0522.github.io/aurevo-watch-store/)** | [GitHub Repo](https://github.com/Anji0522/aurevo-watch-store) |
+| 🎓 **LearnHub LMS** | Full-Stack LMS | **[Live Demo](https://anji0522.github.io/learnhub-lms/)** | [GitHub Repo](https://github.com/Anji0522/learnhub-lms) |
+| 🌐 **SocialConnect** | MERN + Socket.io | **[Live Demo](https://anji0522.github.io/socialConnect/)** | [GitHub Repo](https://github.com/Anji0522/socialConnect) |
+| ⚡ **ServiceNest (Flagship)** | Full-Stack Marketplace | **[Live Demo](https://anji0522.github.io/ServiceNest/)** | [GitHub Repo](https://github.com/Anji0522/ServiceNest) |
+| 📱 **MobiVerse India** | Full-Stack Marketplace | **[Live Demo](https://mobiverse-india.surge.sh/)** | [GitHub Repo](https://github.com/Anji0522/mobileSite) |
+| 📚 **Book Hub** | Frontend (React) | **[Live Demo](https://anji0522.github.io/bookhub/)** | [GitHub Repo](https://github.com/Anji0522/bookhub) |
+| 💼 **Jobby App** | Frontend (React) | **[Live Demo](https://anji0522.github.io/JobbyApp/)** | [GitHub Repo](https://github.com/Anji0522/JobbyApp) |
+| 🎬 **Nxt Watch** | Frontend (React) | **[Live Demo](https://nxtwatch-anjisiddam01.surge.sh/)** | [GitHub Repo](https://github.com/Anji0522/NxtWatch) |
+| 🐦 **Twitter Clone API** | Backend REST API | *REST API Service* | [GitHub Repo](https://github.com/Anji0522/twitterNodeJS) |
+
+- **Developer GitHub Profile**: [https://github.com/Anji0522](https://github.com/Anji0522)
 - **LinkedIn Profile**: [https://www.linkedin.com/in/siddam-anjaiah/](https://www.linkedin.com/in/siddam-anjaiah/)
-- **ServiceNest Live Demo**: [https://anji0522.github.io/ServiceNest/](https://anji0522.github.io/ServiceNest/)
-- **Book Hub Live Demo**: [https://anji0522.github.io/bookhub/](https://anji0522.github.io/bookhub/)
-- **Jobby App Live Demo**: [https://anji0522.github.io/JobbyApp/](https://anji0522.github.io/JobbyApp/)
-- **Nxt Watch Live Demo**: [https://nxtwatch-anjisiddam01.surge.sh/](https://nxtwatch-anjisiddam01.surge.sh/)
 
 ---
 
 ## ✨ Key Features
-- **True MERN Architecture**: React client communicates with Express REST endpoints backed by MongoDB / Mongoose models.
-- **Admin JWT Authentication**: Secure bcrypt password encryption and HS256 JWT tokens guarding admin dashboard routes (`/admin/dashboard`).
+- **True Full-Stack Architecture**: React 18 client communicates with Express REST endpoints backed by MongoDB / Mongoose models and in-memory development fallback.
+- **Admin JWT Authentication**: Secure bcrypt password encryption and HS256 JWT tokens guarding admin dashboard routes (`#/admin/dashboard`).
 - **Interactive Admin Dashboard**: Full CRUD management over Projects, Skills, Certifications, Profile metadata, and inbound Contact Messages.
 - **Live GitHub Synchronization & Diff Engine**: Direct real-time synchronization with `https://api.github.com/users/Anji0522/repos` that automatically detects when any repository is **added, updated, or deleted** on GitHub. Features 60-second background polling, automatic re-check on browser tab focus, animated diff notification alerts, relative timestamps ("Updated 5m ago"), and new repo highlight badges.
 - **Dynamic Filter & Search System**: Instant multi-criteria filtering across categories (Full-Stack, Frontend, Backend) and individual technologies with alphabetical and date sorting.
-- **Verified Official Resume Viewer**: Embedded 1-page PDF viewer with direct in-browser inspection and one-click PDF downloading.
+- **Verified Official Resume Viewer**: Embedded PDF viewer with direct in-browser inspection and one-click PDF downloading.
 - **NxtWave Verified Certifications**: Direct links to official CCBP 4.0 Academy certificate verification credentials.
 - **Contact Message Pipeline**: Validated contact form submitting to `POST /api/contact`, stored securely in MongoDB with rate-limiting spam protection and celebratory canvas-confetti.
 - **Light & Dark Mode**: Seamless theme toggling persisted in `localStorage` and synchronized with system color schemes.
 - **Fluid & Accessible Animations**: Framer Motion transitions adhering strictly to `prefers-reduced-motion` accessibility standards.
 - **Full SEO & Open Graph Support**: Optimized title tags, meta descriptions, Open Graph banners, Twitter cards, `robots.txt`, and `sitemap.xml`.
-- **Zero-Setup Database Fallback**: Built-in in-memory MongoDB fallback so the app starts and seeds immediately in development even before setting up MongoDB Atlas!
+- **Zero-Setup Database Fallback**: Built-in in-memory fallback so the app starts and seeds immediately in development even before setting up MongoDB Atlas!
 
 ---
 
@@ -64,7 +74,7 @@ The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certif
 
 ### Frontend
 - **Framework & Tooling**: React 18, Vite, JavaScript (ES6+)
-- **Routing**: React Router v6 (Nested layouts, protected routes, breadcrumbs)
+- **Routing**: React Router v6 (HashRouter for seamless GitHub Pages single-page routing)
 - **Styling**: Modern CSS3 Custom Properties (Design Tokens), Flexbox, CSS Grid, Styled Components
 - **Animations**: Framer Motion, Canvas Confetti
 - **Icons**: React Icons (FontAwesome, SimpleIcons, TablerIcons)
@@ -81,7 +91,7 @@ The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certif
 - **Development Fallback**: In-Memory MongoDB Server (`mongodb-memory-server`)
 
 ### Deployment & Tooling
-- **Frontend**: Vercel / GitHub Pages
+- **Frontend**: GitHub Pages / Vercel / Surge
 - **Backend**: Render / Railway
 - **Database**: MongoDB Atlas
 - **CI/CD**: GitHub Actions
@@ -94,6 +104,7 @@ The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certif
 - **Subtitle**: Full Stack Service Marketplace with Role-Based Accounts and Payments
 - **Tech Stack**: React, Vite, Node.js, Express.js, SQLite, JWT, bcrypt, Razorpay, GitHub Actions
 - **Live Demo**: [https://anji0522.github.io/ServiceNest/](https://anji0522.github.io/ServiceNest/)
+- **GitHub Repository**: [https://github.com/Anji0522/ServiceNest](https://github.com/Anji0522/ServiceNest)
 - **Core Features**:
   - Customer accounts & Provider accounts with role-based access control (RBAC).
   - 15+ REST endpoints with SQLite database queries.
@@ -101,28 +112,51 @@ The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certif
   - Razorpay Checkout integration with cryptographic webhook signature verification.
   - Participant-only auto-refreshing chat and cash-after-service support.
 
-### 2. Book Hub
+### 2. MobiVerse India
+- **Subtitle**: Production-Quality MERN Marketplace for Mobiles & Accessories
+- **Tech Stack**: React 18, Vite, Node.js, Express.js, MongoDB, Mongoose, JWT, bcrypt, Razorpay, Surge
+- **Live Demo**: [https://mobiverse-india.surge.sh/](https://mobiverse-india.surge.sh/)
+- **GitHub Repository**: [https://github.com/Anji0522/mobileSite](https://github.com/Anji0522/mobileSite)
+- **Core Features**:
+  - 116+ real verified Indian smartphones across 15+ brands with 696+ compatible accessories.
+  - 4-way side-by-side device spec comparison matrix with difference highlighting.
+  - Doorstep repair booking service with live price estimation for screen and battery replacements.
+  - Algorithmic trade-in valuation engine based on device condition diagnostics.
+  - PCI-DSS compliant Razorpay hosted checkout supporting UPI, Cards, Net Banking, and COD.
+
+### 3. Book Hub
 - **Description**: Book Discovery Web App with Cookie-Based JWT Authentication
 - **Tech Stack**: React, React Router, react-slick, react-icons, js-cookie, REST APIs
 - **Live Demo**: [https://anji0522.github.io/bookhub/](https://anji0522.github.io/bookhub/)
+- **GitHub Repository**: [https://github.com/Anji0522/bookhub](https://github.com/Anji0522/bookhub)
 - **Core Features**: 5-route protected application, cookie auth, combined shelf and keyword search, responsive carousel, and React Testing Library compliance.
 
-### 3. Jobby App
+### 4. Jobby App
 - **Description**: Job Search Web App with Multi-Criteria Query Filtering
 - **Tech Stack**: React, React Router, js-cookie, react-icons, REST APIs
 - **Live Demo**: [https://anji0522.github.io/JobbyApp/](https://anji0522.github.io/JobbyApp/)
+- **GitHub Repository**: [https://github.com/Anji0522/JobbyApp](https://github.com/Anji0522/JobbyApp)
 - **Core Features**: JWT authentication, unified search string merging checkboxes and salary radio buttons, job details page with similar recommendations.
 
-### 4. Nxt Watch
+### 5. Nxt Watch
 - **Description**: Video Streaming Application with Light and Dark Theming
 - **Tech Stack**: React, React Router, Styled Components, Context API, react-player, REST APIs
 - **Live Demo**: [https://nxtwatch-anjisiddam01.surge.sh/](https://nxtwatch-anjisiddam01.surge.sh/)
+- **GitHub Repository**: [https://github.com/Anji0522/NxtWatch](https://github.com/Anji0522/NxtWatch)
 - **Core Features**: Global state with Context API, light/dark theming, video playback, mutually exclusive Like/Dislike, and Saved Videos route.
 
-### 5. Twitter Clone — Backend REST API
+### 6. Twitter Clone — Backend REST API
 - **Description**: Scalable Social Network REST API with Relational Queries
 - **Tech Stack**: Node.js, Express.js, SQLite, JWT, bcrypt
+- **GitHub Repository**: [https://github.com/Anji0522/twitterNodeJS](https://github.com/Anji0522/twitterNodeJS)
 - **Core Features**: 11 RESTful endpoints, bcrypt hashing, JWT middleware, SQL joins and aggregates across 5 relational tables, and feed generation.
+
+### 7. MERN Developer Portfolio
+- **Description**: Production Full-Stack Portfolio with Live GitHub Sync Engine & Admin CMS
+- **Tech Stack**: React 18, Vite, Node.js, Express.js, MongoDB, Mongoose, JWT, Framer Motion, GitHub Actions
+- **Live Demo**: [https://anji0522.github.io/siddam-anjaiah-portfolio/](https://anji0522.github.io/siddam-anjaiah-portfolio/)
+- **GitHub Repository**: [https://github.com/Anji0522/siddam-anjaiah-portfolio](https://github.com/Anji0522/siddam-anjaiah-portfolio)
+- **Core Features**: Real-time GitHub sync engine, dynamic project filter toolbar, administrative dashboard, official resume viewer, and dark/light themes.
 
 ---
 
@@ -273,12 +307,15 @@ The compiled assets will be placed in `client/dist`.
 ## 👨‍💻 Author & Contact
 
 **Siddam Anjaiah**  
-*React Frontend Developer | Full-Stack Developer*  
+*React Frontend Developer | Junior Full Stack (React + Node.js)*  
 - 📍 **Location**: Mancherial, Telangana, India  
+- 🚀 **Open to Relocate**: Hyderabad, Bengaluru, Chennai  
 - 📧 **Email**: [anjisiddam01@gmail.com](mailto:anjisiddam01@gmail.com)  
 - 📞 **Phone**: [+91 9390098364](tel:9390098364)  
-- 🐙 **GitHub**: [https://github.com/Anji0522](https://github.com/Anji0522)  
-- 💼 **LinkedIn**: [https://www.linkedin.com/in/siddam-anjaiah/](https://www.linkedin.com/in/siddam-anjaiah/)  
+- 🐙 **GitHub Profile**: [https://github.com/Anji0522](https://github.com/Anji0522)  
+- 💼 **LinkedIn Profile**: [https://www.linkedin.com/in/siddam-anjaiah/](https://www.linkedin.com/in/siddam-anjaiah/)  
+- 📄 **Resume**: [Verified Developer Resume (PDF)](https://anji0522.github.io/siddam-anjaiah-portfolio/#/resume)  
+- 🌐 **Live Portfolio**: [https://anji0522.github.io/siddam-anjaiah-portfolio/](https://anji0522.github.io/siddam-anjaiah-portfolio/)  
 
 ---
 *Built with ❤️ using the MERN Stack (MongoDB, Express, React, Node.js).*

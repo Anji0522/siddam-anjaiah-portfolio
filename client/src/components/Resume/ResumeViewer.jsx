@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa';
 import './Resume.css';
 
-const ResumeViewer = ({ resumeUrl = '/assets/Siddam_Anjaiah_React_Frontend_Resume_1Page.pdf' }) => {
+const ResumeViewer = ({ resumeUrl = '/assets/Siddam_Anjaiah_React_Frontend_Resume.pdf' }) => {
   const [activeTab, setActiveTab] = useState('embed');
 
   return (
@@ -22,8 +22,8 @@ const ResumeViewer = ({ resumeUrl = '/assets/Siddam_Anjaiah_React_Frontend_Resum
             <FaFilePdf size={24} />
           </div>
           <div>
-            <h3 className="resume-filename">Siddam_Anjaiah_React_Frontend_Resume_1Page.pdf</h3>
-            <span className="resume-filesize">Verified 1-Page Developer Resume • PDF Document</span>
+            <h3 className="resume-filename">Siddam_Anjaiah_React_Frontend_Resume.pdf</h3>
+            <span className="resume-filesize">Verified Developer Resume • PDF Document (React + Junior Full Stack)</span>
           </div>
         </div>
 
@@ -97,23 +97,23 @@ const ResumeViewer = ({ resumeUrl = '/assets/Siddam_Anjaiah_React_Frontend_Resum
           </div>
           <div className="summary-item">
             <strong>Target Roles:</strong>
-            <span>React Developer, Frontend Developer, Full-Stack Developer</span>
+            <span>React Frontend Developer | Junior Full Stack (React + Node.js)</span>
           </div>
           <div className="summary-item">
             <strong>Key Projects:</strong>
-            <span>ServiceNest, Book Hub, Jobby App, Nxt Watch, Twitter Clone Backend</span>
+            <span>ServiceNest, MobiVerse India, Book Hub, Jobby App, Nxt Watch, Twitter Clone REST API</span>
           </div>
           <div className="summary-item">
             <strong>Education:</strong>
-            <span>B.Com Computer Applications (CGPA 6.63) • Intermediate (50.6%) • 10th (GPA 8.3)</span>
+            <span>B.Com Computer Applications (CGPA 6.23) • Intermediate (CEC) • TS Model School</span>
           </div>
           <div className="summary-item">
             <strong>Certifications:</strong>
-            <span>NxtWave CCBP (React JS, JavaScript, Databases, Web Design)</span>
+            <span>NxtWave CCBP (React JS, JavaScript, Databases, Web Design, Foundations)</span>
           </div>
           <div className="summary-item">
             <strong>Location & Contact:</strong>
-            <span>Mancherial, Telangana • anjisiddam01@gmail.com • 9390098364</span>
+            <span>Mancherial, Telangana (Open to relocate: Hyderabad, Bengaluru, Chennai) • anjisiddam01@gmail.com • 9390098364</span>
           </div>
         </div>
       </div>

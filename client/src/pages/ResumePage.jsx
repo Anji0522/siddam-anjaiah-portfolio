@@ -23,7 +23,7 @@ const ResumePage = () => {
           </span>
           <h1 className="section-title">Official Developer Resume</h1>
           <p className="section-subtitle">
-            Preview, inspect, or download my verified 1-page React and Full-Stack Developer resume.
+            Preview, inspect, or download my verified React Frontend and Junior Full-Stack Developer resume.
           </p>
         </div>
 

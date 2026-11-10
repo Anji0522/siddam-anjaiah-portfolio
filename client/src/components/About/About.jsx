@@ -14,9 +14,9 @@ import './About.css';
 
 const About = ({ profile }) => {
   const stats = [
-    { value: profile?.stats?.apiApps || '4+', label: 'REST API Driven Apps', desc: 'Built and fully deployed end-to-end' },
-    { value: profile?.stats?.restApis || '11', label: 'Backend REST APIs', desc: 'Node.js, Express & SQLite architecture' },
-    { value: profile?.stats?.projectsCount || '5', label: 'Major Portfolio Projects', desc: 'ServiceNest, Book Hub, Jobby, Nxt Watch, Twitter' },
+    { value: profile?.stats?.apiApps || '5+', label: 'REST API Driven Apps', desc: 'Built and fully deployed end-to-end' },
+    { value: profile?.stats?.restApis || '15+', label: 'Backend REST APIs', desc: 'Node.js, Express & database architecture' },
+    { value: profile?.stats?.projectsCount || '7', label: 'Portfolio Projects', desc: 'ServiceNest, MobiVerse, Book Hub, Jobby, Nxt Watch, Twitter' },
     { value: profile?.stats?.architecture || 'MERN', label: 'Full-Stack Architecture', desc: 'React, Node, Express, MongoDB & SQLite' }
   ];
 
@@ -88,16 +88,12 @@ const About = ({ profile }) => {
           <div className="about-bio-col">
             <h3 className="subheading-bordered">Professional Background</h3>
             <p className="about-paragraph">
-              I am a React-focused frontend developer who has developed and deployed real-world
-              REST API-driven applications and full-stack systems. My projects range from complex single-page
-              applications like <strong>Book Hub</strong>, <strong>Jobby App</strong>, and <strong>Nxt Watch</strong> to
-              full-stack applications like <strong>ServiceNest</strong>, complete with customer and provider accounts,
-              role-protected dashboards, and Razorpay payment checkout.
+              I am an entry-level React and Full-Stack developer who has built and deployed REST API-driven applications and full-stack systems. My work spans full-stack platforms like <strong>Expense Tracker</strong> (React + PostgreSQL), <strong>Aurevo Watch Store</strong> (3D Three.js + MERN), <strong>LearnHub LMS</strong>, <strong>SocialConnect</strong> (MERN + Socket.io), <strong>ServiceNest</strong>, and <strong>MobiVerse India</strong>, alongside featured single-page React applications like <strong>Book Hub</strong>, <strong>Jobby App</strong>, and <strong>Nxt Watch</strong>.
             </p>
             <p className="about-paragraph">
               Additionally, I designed and developed a <strong>Twitter Clone Backend</strong> featuring 11 REST APIs,
               bcrypt password encryption, relational SQL joins across five tables, and JWT middleware.
-              I take pride in producing accessible, semantic markup that strictly complies with automated
+              I take pride in producing accessible, responsive, semantic markup that strictly complies with automated
               testing suites like React Testing Library.
             </p>
 

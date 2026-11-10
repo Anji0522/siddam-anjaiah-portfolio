@@ -349,7 +349,7 @@
   background: var(--bg-card);
   border-color: var(--primary);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.18);
 }
 
 .clear-search-btn {
@@ -533,8 +533,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: rgba(37, 99, 235, 0.08);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: rgba(234, 88, 12, 0.08);
+  border: 1px solid rgba(234, 88, 12, 0.22);
   border-radius: var(--radius-md);
   padding: 0.75rem 1.25rem;
   margin-bottom: 1.75rem;
@@ -543,8 +543,8 @@
 }
 
 [data-theme='dark'] .github-live-sync-banner {
-  background: rgba(59, 130, 246, 0.12);
-  border-color: rgba(59, 130, 246, 0.25);
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.25);
 }
 
 .live-sync-status-indicator {
@@ -798,7 +798,7 @@
 
 .repo-action-icon:hover {
   color: var(--primary);
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(234, 88, 12, 0.12);
   transform: scale(1.05);
 }
 
