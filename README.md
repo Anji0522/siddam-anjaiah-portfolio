@@ -1,12 +1,48 @@
-# Siddam Anjaiah — MERN Developer Portfolio 🚀
+# Siddam Anjaiah — Luxury Animated Full-Stack Developer Portfolio ✨
 
 [![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
+[![GSAP](https://img.shields.io/badge/GSAP-3.15-brightgreen?logo=greensock)](https://greensock.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-20+-green?logo=node.js)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express-4.19-lightgrey?logo=express)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-brightgreen?logo=mongodb)](https://www.mongodb.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-blue?logo=postgresql)](https://postgresql.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> A production-grade, full-stack **Developer Portfolio** engineered for **Siddam Anjaiah** (React Frontend Developer | Junior Full Stack [React + Node.js]). Built to showcase real-world REST API-driven single-page applications, full-stack marketplaces, protected routing, real-time GitHub synchronization, and backend systems.
+> A world-class, premium animated developer portfolio website inspired by high-end international creative design agencies. Featuring pitch-black luxury aesthetics, warm champagne gold typography, oversized editorial headlines, hairline borders, GSAP & Framer Motion physics, and verified showcase of production-grade full-stack applications.
+
+---
+
+## 🌐 Live Production Deployment
+- **Official Live Portfolio**: **[https://anji0522.github.io/siddam-anjaiah-portfolio/](https://anji0522.github.io/siddam-anjaiah-portfolio/)**
+- **GitHub Source Code**: [https://github.com/Anji0522/siddam-anjaiah-portfolio](https://github.com/Anji0522/siddam-anjaiah-portfolio)
+- **Developer GitHub**: [https://github.com/Anji0522](https://github.com/Anji0522)
+- **LinkedIn**: [https://www.linkedin.com/in/siddam-anjaiah/](https://www.linkedin.com/in/siddam-anjaiah/)
+
+---
+
+## 🏛 Luxury Design Direction & Architecture
+- **Palette**: Pitch-black canvas (`#070708` / `#0b0b0e`), warm champagne gold (`#d4af37`), pure cream typography (`#f4efe6`), subtle slate separators, and hairline grid borders.
+- **Typography**: Oversized creative editorial typography featuring *Cinzel*, *Italiana*, *Space Grotesk*, and *JetBrains Mono*.
+- **Motion & Dynamics**: GSAP character reveals, buttery smooth scroll triggers, Framer Motion staggered reveals, interactive mouse glows, and custom hover states.
+- **Responsive Mastery**: Crafted for fluid perfection across ultra-wide monitors, laptops, tablets, and mobile devices (iPhones & Androids).
+
+---
+
+## 📌 7 Curated Portfolio Sections
+1. **Hero / Landing Page**: Oversized `"CREATIVE DEVELOPER"` statement headline, `"Building Digital Experiences That Make an Impact."`, tri-pillar breakdown (Visuals, Code, Experience), and animated scroll indicator.
+2. **Navigation**: Minimalist sticky header with instant smooth-scrolling links (`WORK`, `ABOUT`, `JOURNAL`, `EXPERTISE`, `CONTACT`), availability beacon, and quick CV download.
+3. **About Me**: `"BUILDING DIGITAL WORLDS WITH CODE AND CREATIVITY."` - In-depth narrative highlighting academic background (B.Com Computer Applications, Vivekavardhini Degree College, CGPA: 6.23), full-stack aspirations, verified profile photo, and downloadable resume.
+4. **Expertise / Skills**: 4 distinct interactive categories:
+   - *Creative Development* (Modern CSS3, responsive systems, animations, layout engines)
+   - *Motion & Interaction* (GSAP, Framer Motion, micro-interactions, smooth state changes)
+   - *UI / UX Design* (Visual hierarchy, luxury typography, typography scales, accessibility)
+   - *Modern Web Applications* (React 18, Node.js, Express.js, PostgreSQL, SQLite, MongoDB, REST APIs)
+5. **Selected Work / Projects**: High-impact editorial project showcases featuring verified repositories and production deployments:
+   - **ServiceNest**: Full-stack service marketplace (React, Node, Express, SQLite, Razorpay).
+   - **LearnHub LMS**: Online learning management system with course architectures.
+   - **Expense Tracker**: Expense management application with PostgreSQL / Neon database.
+   - **JobbyApp**: Comprehensive job search SPA with authentication & protected routes.
+6. **Journal / Journey Timeline**: Chronological evolution detailing web fundamentals, full-stack training, production architectures, and future software engineering milestones.
+7. **Contact & Inquiry**: `"LET'S CREATE SOMETHING MEANINGFUL."` - Direct channels (Email, Phone, Location: Mancherial, Telangana, India, verified GitHub & LinkedIn) alongside a functional, validated inquiry dispatch form with real-time feedback.
 
 ---
 

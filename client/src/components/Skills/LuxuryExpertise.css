@@ -1,0 +1,214 @@
+.luxury-expertise {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.expertise-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.pillar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold-gradient);
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.pillar-card:hover,
+.pillar-card.active-pillar {
+  border-color: var(--border-gold);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.pillar-card:hover::before,
+.pillar-card.active-pillar::before {
+  opacity: 1;
+}
+
+.pillar-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-index {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.2em;
+}
+
+.pillar-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  opacity: 0.5;
+}
+
+.pillar-name {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  color: var(--text-cream);
+  margin-bottom: 0.4rem;
+}
+
+.pillar-tagline {
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  margin-bottom: 1.25rem;
+}
+
+.pillar-description {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.pillar-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.pillar-skill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-cream-soft);
+  background: rgba(244, 239, 230, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.35rem 0.75rem;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+}
+
+.pillar-skill-tag:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+}
+
+/* Core Stack Strip */
+.core-stack-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  position: relative;
+}
+
+.core-stack-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-hairline);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.core-stack-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  color: var(--text-cream);
+}
+
+.core-stack-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.18em;
+}
+
+.core-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.core-tech-card {
+  background: rgba(18, 18, 22, 0.5);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.core-tech-card:hover {
+  border-color: var(--border-gold);
+  background: rgba(26, 26, 32, 0.8);
+  transform: translateY(-3px);
+}
+
+.tech-category {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.tech-name {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-cream);
+}
+
+.tech-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 992px) {
+  .expertise-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .core-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .core-stack-grid {
+    grid-template-columns: 1fr;
+  }
+  .core-stack-section {
+    padding: 1.75rem;
+  }
+}

@@ -1,96 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Hero from '../components/Hero/Hero';
-import About from '../components/About/About';
-import Skills from '../components/Skills/Skills';
-import FeaturedProject from '../components/Projects/FeaturedProject';
-import ProjectCard from '../components/Projects/ProjectCard';
-import { api } from '../services/api';
-import { FaArrowRight, FaCode, FaRocket } from 'react-icons/fa';
+import React from 'react';
+import LuxuryNavbar from '../components/Navbar/LuxuryNavbar';
+import LuxuryHero from '../components/Hero/LuxuryHero';
+import LuxuryAbout from '../components/About/LuxuryAbout';
+import LuxuryProjects from '../components/Projects/LuxuryProjects';
+import LuxuryJournal from '../components/Interests/LuxuryJournal';
+import LuxuryExpertise from '../components/Skills/LuxuryExpertise';
+import LuxuryContact from '../components/Contact/LuxuryContact';
+import LuxuryFooter from '../components/Footer/LuxuryFooter';
 
 const Home = () => {
-  const [profile, setProfile] = useState(null);
-  const [projects, setProjects] = useState([]);
-  const [skills, setSkills] = useState([]);
-
-  useEffect(() => {
-    const loadData = async () => {
-      const [profRes, projRes, skillRes] = await Promise.all([
-        api.getProfile(),
-        api.getProjects(),
-        api.getSkills()
-      ]);
-
-      if (profRes.success) setProfile(profRes.data);
-      if (projRes.success) setProjects(projRes.data);
-      if (skillRes.success) setSkills(skillRes.data);
-    };
-
-    loadData();
-  }, []);
-
-  const featuredProject = projects.find((p) => p.featured) || projects[0];
-  const otherProjects = projects.filter((p) => p !== featuredProject);
-
   return (
-    <div className="home-page">
-      {/* 1. Hero Section */}
-      <Hero profile={profile} />
+    <div className="luxury-portfolio-root">
+      {/* Ambient background glows */}
+      <div className="ambient-glow-1"></div>
+      <div className="ambient-glow-2"></div>
 
-      {/* 2. Primary Featured Project (ServiceNest) */}
-      <section className="section-padding featured-showcase-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">
-              <FaRocket size={13} />
-              <span>Full-Stack Flagship</span>
-            </span>
-            <h2 className="section-title">Featured Project Showcase</h2>
-            <p className="section-subtitle">
-              An end-to-end service marketplace demonstrating full-stack engineering, secure authentication,
-              payment gateway integration, and role-based access.
-            </p>
-          </div>
+      {/* 1. Navigation Menu */}
+      <LuxuryNavbar />
 
-          <FeaturedProject project={featuredProject} />
-        </div>
-      </section>
+      {/* 2. Hero Landing Page */}
+      <LuxuryHero />
 
-      {/* 3. Skills Summary */}
-      <Skills skills={skills} />
+      {/* 3. Selected Work / Projects */}
+      <LuxuryProjects />
 
-      {/* 4. Portfolio Projects Grid */}
-      <section className="section-padding projects-preview-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">
-              <FaCode size={13} />
-              <span>Real-World Applications</span>
-            </span>
-            <h2 className="section-title">Recent Portfolio Projects</h2>
-            <p className="section-subtitle">
-              Single-page React apps and Node.js REST APIs built with JWT authentication, responsive layouts,
-              and strict accessibility compliance.
-            </p>
-          </div>
+      {/* 4. About Me */}
+      <LuxuryAbout />
 
-          <div className="projects-grid">
-            {otherProjects.map((project) => (
-              <ProjectCard key={project._id || project.slug} project={project} />
-            ))}
-          </div>
+      {/* 5. Journal / Evolution Timeline */}
+      <LuxuryJournal />
 
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <Link to="/projects" className="btn btn-primary btn-lg">
-              <span>Explore All Projects & Source Code</span>
-              <FaArrowRight size={15} />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* 6. Expertise / Technical Skills */}
+      <LuxuryExpertise />
 
-      {/* 5. About & Objectives */}
-      <About profile={profile} />
+      {/* 7. Contact Section */}
+      <LuxuryContact />
+
+      {/* 8. Luxury Footer */}
+      <LuxuryFooter />
     </div>
   );
 };

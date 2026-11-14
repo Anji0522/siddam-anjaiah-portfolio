@@ -1,0 +1,120 @@
+.luxury-footer {
+  background: var(--bg-primary);
+  padding: 6rem 0 3.5rem 0;
+  border-top: 1px solid var(--border-hairline);
+  position: relative;
+}
+
+.footer-hero-strip {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-statement-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.25em;
+}
+
+.footer-big-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text-cream);
+}
+
+.back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.back-to-top-btn:hover {
+  background: var(--gold-gradient);
+  color: #070708;
+  border-color: transparent;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--gold-glow);
+}
+
+.footer-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.copyright-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-cream);
+  letter-spacing: 0.1em;
+}
+
+.copyright-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-social-a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  transition: color var(--transition-fast);
+}
+
+.footer-social-a:hover {
+  color: var(--gold-light);
+}
+
+@media (max-width: 768px) {
+  .luxury-footer {
+    padding: 4rem 0 2.5rem 0;
+  }
+  .back-to-top-btn {
+    width: 65px;
+    height: 65px;
+  }
+}
