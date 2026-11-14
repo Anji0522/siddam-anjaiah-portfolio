@@ -62,7 +62,7 @@ const LuxuryNavbar = () => {
         {/* Action Button: Available for Hire / Resume */}
         <div className="luxury-nav-actions">
           <a
-            href="/assets/Siddam_Anjaiah_React_Frontend_Resume.pdf"
+            href="./assets/Siddam_Anjaiah_React_Frontend_Resume.pdf"
             download="Siddam_Anjaiah_React_Frontend_Resume.pdf"
             className="luxury-nav-cta"
             title="Download Official Resume"
@@ -110,7 +110,7 @@ const LuxuryNavbar = () => {
 
             <div className="mobile-drawer-footer">
               <a
-                href="/assets/Siddam_Anjaiah_React_Frontend_Resume.pdf"
+                href="./assets/Siddam_Anjaiah_React_Frontend_Resume.pdf"
                 download="Siddam_Anjaiah_React_Frontend_Resume.pdf"
                 className="btn-luxury-primary"
                 style={{ width: '100%' }}

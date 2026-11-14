@@ -44,10 +44,10 @@ const LuxuryAbout = () => {
             <div className="about-resume-banner">
               <div>
                 <h4 className="resume-cta-title">OFFICIAL DEVELOPER CV</h4>
-                <p className="resume-cta-sub">Verified 2-page curriculum vitae with full project technical breakdown.</p>
+                <p className="resume-cta-sub">Verified curriculum vitae with project technical breakdowns and skills.</p>
               </div>
               <a
-                href="/assets/Siddam_Anjaiah_React_Frontend_Resume.pdf"
+                href="./assets/Siddam_Anjaiah_React_Frontend_Resume.pdf"
                 download="Siddam_Anjaiah_React_Frontend_Resume.pdf"
                 className="btn-luxury-primary"
               >
