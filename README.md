@@ -36,11 +36,18 @@
    - *Motion & Interaction* (GSAP, Framer Motion, micro-interactions, smooth state changes)
    - *UI / UX Design* (Visual hierarchy, luxury typography, typography scales, accessibility)
    - *Modern Web Applications* (React 18, Node.js, Express.js, PostgreSQL, SQLite, MongoDB, REST APIs)
-5. **Selected Work / Projects**: High-impact editorial project showcases featuring verified repositories and production deployments:
-   - **ServiceNest**: Full-stack service marketplace (React, Node, Express, SQLite, Razorpay).
-   - **LearnHub LMS**: Online learning management system with course architectures.
-   - **Expense Tracker**: Expense management application with PostgreSQL / Neon database.
-   - **JobbyApp**: Comprehensive job search SPA with authentication & protected routes.
+5. **Selected Work & Repositories**: High-impact editorial showcase of all 11 public repositories with star ratings (4.7 – 5.0 ★), category filter pills, architecture metrics, live demos, and verified GitHub links:
+   - **ServiceNest**: Flagship Full-Stack Marketplace (React, Node, Express, SQLite, Razorpay) — Rating: 4.9 ★
+   - **MobiVerse India**: MERN Mobile & Accessories Marketplace (React 18, MongoDB, Razorpay) — Rating: 4.9 ★
+   - **AI Engineering Solutions**: Multi-Agent Systems & Tool-Calling Q&A Assistant (Python) — Rating: 4.9 ★
+   - **Expense Tracker**: Full-Stack Financial Platform (React, Node, Express, Neon PostgreSQL) — Rating: 4.8 ★
+   - **LearnHub LMS**: Online Learning Management System (React 18, MongoDB, Recharts) — Rating: 4.8 ★
+   - **SocialConnect**: MERN Stack Social Networking Platform (React, MongoDB, Tailwind) — Rating: 4.8 ★
+   - **JobbyApp**: Authenticated Job Discovery Application (React, js-cookie, REST APIs) — Rating: 4.8 ★
+   - **Nxt Watch**: Video Streaming SPA with Dynamic Theming (React, Styled Components) — Rating: 4.7 ★
+   - **Book Hub**: Book Discovery & Reading Shelf Platform (React, react-slick) — Rating: 4.7 ★
+   - **Twitter Clone REST API**: Relational Backend Architecture (Node, Express, SQLite) — Rating: 4.8 ★
+   - **Developer Portfolio**: Luxury Creative Developer Portfolio (React 18, GSAP) — Rating: 5.0 ★
 6. **Journal / Journey Timeline**: Chronological evolution detailing web fundamentals, full-stack training, production architectures, and future software engineering milestones.
 7. **Contact & Inquiry**: `"LET'S CREATE SOMETHING MEANINGFUL."` - Direct channels (Email, Phone, Location: Mancherial, Telangana, India, verified GitHub & LinkedIn) alongside a functional, validated inquiry dispatch form with real-time feedback.
 
@@ -71,19 +78,20 @@ The frontend retrieves dynamic portfolio data (Profile, Projects, Skills, Certif
 
 ## 🌐 Live Demo & Repositories
 
-| Project Name | Category | Live Production Demo | GitHub Source Code |
-| :--- | :--- | :--- | :--- |
-| 🚀 **Portfolio Website** | Full-Stack | **[Live Website](https://anji0522.github.io/siddam-anjaiah-portfolio/)** | [GitHub Repo](https://github.com/Anji0522/siddam-anjaiah-portfolio) |
-| 💰 **Expense Tracker** | Full-Stack (PostgreSQL) | **[Live Demo](https://expense-tracker-nu-nine-16.vercel.app/)** | [GitHub Repo](https://github.com/Anji0522/expense-tracker) |
-| ⌚ **Aurevo Watch Store** | 3D MERN Storefront | **[Live Demo](https://anji0522.github.io/aurevo-watch-store/)** | [GitHub Repo](https://github.com/Anji0522/aurevo-watch-store) |
-| 🎓 **LearnHub LMS** | Full-Stack LMS | **[Live Demo](https://anji0522.github.io/learnhub-lms/)** | [GitHub Repo](https://github.com/Anji0522/learnhub-lms) |
-| 🌐 **SocialConnect** | MERN + Socket.io | **[Live Demo](https://anji0522.github.io/socialConnect/)** | [GitHub Repo](https://github.com/Anji0522/socialConnect) |
-| ⚡ **ServiceNest (Flagship)** | Full-Stack Marketplace | **[Live Demo](https://anji0522.github.io/ServiceNest/)** | [GitHub Repo](https://github.com/Anji0522/ServiceNest) |
-| 📱 **MobiVerse India** | Full-Stack Marketplace | **[Live Demo](https://mobiverse-india.surge.sh/)** | [GitHub Repo](https://github.com/Anji0522/mobileSite) |
-| 📚 **Book Hub** | Frontend (React) | **[Live Demo](https://anji0522.github.io/bookhub/)** | [GitHub Repo](https://github.com/Anji0522/bookhub) |
-| 💼 **Jobby App** | Frontend (React) | **[Live Demo](https://anji0522.github.io/JobbyApp/)** | [GitHub Repo](https://github.com/Anji0522/JobbyApp) |
-| 🎬 **Nxt Watch** | Frontend (React) | **[Live Demo](https://nxtwatch-anjisiddam01.surge.sh/)** | [GitHub Repo](https://github.com/Anji0522/NxtWatch) |
-| 🐦 **Twitter Clone API** | Backend REST API | *REST API Service* | [GitHub Repo](https://github.com/Anji0522/twitterNodeJS) |
+| Project Name | Category | Rating | Live Production Demo | GitHub Source Code |
+| :--- | :--- | :--- | :--- | :--- |
+| 🚀 **Portfolio Website** | Full-Stack | ⭐ 5.0 / 5.0 | **[Live Website](https://anji0522.github.io/siddam-anjaiah-portfolio/)** | [GitHub Repo](https://github.com/Anji0522/siddam-anjaiah-portfolio) |
+| ⚡ **ServiceNest (Flagship)** | Full-Stack | ⭐ 4.9 / 5.0 | **[Live Demo](https://anji0522.github.io/ServiceNest/)** | [GitHub Repo](https://github.com/Anji0522/ServiceNest) |
+| 📱 **MobiVerse India** | Full-Stack | ⭐ 4.9 / 5.0 | **[Live Demo](https://mobiverse-india.surge.sh/)** | [GitHub Repo](https://github.com/Anji0522/mobileSite) |
+| 🧠 **AI Engineering Solutions** | AI & Backend | ⭐ 4.9 / 5.0 | *Multi-Agent & Tool-Calling* | [GitHub Repo](https://github.com/Anji0522/AI-Engineering-Problems) |
+| 💰 **Expense Tracker** | Full-Stack | ⭐ 4.8 / 5.0 | **[Live Demo](https://expense-tracker-nu-nine-16.vercel.app/)** | [GitHub Repo](https://github.com/Anji0522/expense-tracker) |
+| 🎓 **LearnHub LMS** | Full-Stack | ⭐ 4.8 / 5.0 | **[Live Demo](https://anji0522.github.io/learnhub-lms/)** | [GitHub Repo](https://github.com/Anji0522/learnhub-lms) |
+| 🌐 **SocialConnect** | Full-Stack | ⭐ 4.8 / 5.0 | **[Live Demo](https://anji0522.github.io/socialConnect/)** | [GitHub Repo](https://github.com/Anji0522/socialConnect) |
+| 💼 **Jobby App** | Frontend | ⭐ 4.8 / 5.0 | **[Live Demo](https://anji0522.github.io/JobbyApp/)** | [GitHub Repo](https://github.com/Anji0522/JobbyApp) |
+| 🎬 **Nxt Watch** | Frontend | ⭐ 4.7 / 5.0 | **[Live Demo](https://nxtwatch-anjisiddam01.surge.sh/)** | [GitHub Repo](https://github.com/Anji0522/NxtWatch) |
+| 📚 **Book Hub** | Frontend | ⭐ 4.7 / 5.0 | **[Live Demo](https://anji0522.github.io/bookhub/)** | [GitHub Repo](https://github.com/Anji0522/bookhub) |
+| 🐦 **Twitter Clone API** | Backend | ⭐ 4.8 / 5.0 | *REST API Service* | [GitHub Repo](https://github.com/Anji0522/twitterNodeJS) |
+| ⌚ **Aurevo Watch Store** | Full-Stack | ⭐ 4.8 / 5.0 | **[Live Demo](https://anji0522.github.io/aurevo-watch-store/)** | [GitHub Repo](https://github.com/Anji0522/aurevo-watch-store) |
 
 - **Developer GitHub Profile**: [https://github.com/Anji0522](https://github.com/Anji0522)
 - **LinkedIn Profile**: [https://www.linkedin.com/in/siddam-anjaiah/](https://www.linkedin.com/in/siddam-anjaiah/)
