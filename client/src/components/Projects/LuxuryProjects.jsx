@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, ArrowUpRight, Sparkles, Layers, ShieldCheck, Check, Star, StarHalf, Filter, Code2 } from 'lucide-react';
+import { ExternalLink, ArrowUpRight, Sparkles, Layers, ShieldCheck, Check, Star, StarHalf } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa6';
 import './LuxuryProjects.css';
 
-// All Real Verified GitHub Projects with Ratings & Technical Highlights
+// Exact 10 Verified Repositories from https://github.com/repos?q=owner%3A%40me (Anji0522)
 const verifiedProjects = [
   {
     id: 'ServiceNest',
@@ -33,43 +33,17 @@ const verifiedProjects = [
     paletteAccent: '#d4af37'
   },
   {
-    id: 'mobileSite',
-    number: '02',
-    name: 'MobiVerse India',
-    category: 'Full-Stack',
-    roleTag: 'MERN MOBILE & ACCESSORIES MARKETPLACE',
-    shortDesc:
-      'High-performance Indian mobile and accessories e-commerce marketplace. Features 116+ real verified smartphones, 696+ accessories, 4-way side-by-side device spec comparison with sticky headers and diff highlighting, doorstep repair bookings, and trade-in valuations.',
-    technologies: ['React 18', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'Razorpay', 'Surge'],
-    liveUrl: 'https://mobiverse-india.surge.sh/',
-    githubUrl: 'https://github.com/Anji0522/mobileSite',
-    status: 'Production Live & Deployed',
-    rating: 4.9,
-    reviewsCount: '95+ Reviews',
-    ratingVerdict: 'TOP TIER E-COMMERCE',
-    archScore: '4.9',
-    codeScore: '5.0',
-    reliabilityScore: '99.8%',
-    highlights: [
-      'Catalog of 116+ verified Indian smartphones & 696+ accessories with instant multi-filter search',
-      '4-way side-by-side device comparison table with sticky headers highlighting spec differences',
-      'Doorstep mobile repair scheduling pipeline with dynamic component pricing formulas',
-      'Algorithmic certified trade-in valuation engine calculating real-time exchange discounts'
-    ],
-    paletteAccent: '#f5e6a8'
-  },
-  {
     id: 'AI-Engineering-Problems',
-    number: '03',
+    number: '02',
     name: 'AI Engineering Solutions',
     category: 'AI & Backend',
     roleTag: 'MULTI-AGENT SYSTEMS & AI WORKFLOWS',
     shortDesc:
       'Production AI engineering architectures featuring AgentVerse (an autonomous social network for AI agents with relevance routing) and a Linux Hardware Q&A Assistant featuring deterministic, safe read-only tool-calling verification.',
     technologies: ['Python', 'Multi-Agent Systems', 'Vector Search', 'Relevance Routing', 'Tool-Calling', 'Linux CLI'],
-    liveUrl: null,
+    liveUrl: 'https://anji0522.github.io/AI-Engineering-Problems/',
     githubUrl: 'https://github.com/Anji0522/AI-Engineering-Problems',
-    status: 'Verified Python Architectures',
+    status: 'Live Demos & Verified Architectures',
     rating: 4.9,
     reviewsCount: '88+ Reviews',
     ratingVerdict: 'ENTERPRISE AI ARCHITECTURE',
@@ -80,13 +54,13 @@ const verifiedProjects = [
       'AgentVerse: Multi-agent social network with semantic relevance routing and peer messaging',
       'Linux Hardware Q&A Assistant with safe read-only tool calling and strict sandbox execution',
       'Deterministic output validation mitigating model hallucination and shell command injection',
-      'Modular Python architecture with clean separation of agent intents and tool registries'
+      'Interactive Live Showcase Hub deployed on GitHub Pages with live project demos'
     ],
     paletteAccent: '#d4af37'
   },
   {
     id: 'expense-tracker',
-    number: '04',
+    number: '03',
     name: 'Expense Tracker',
     category: 'Full-Stack',
     roleTag: 'FULL-STACK FINANCIAL PLATFORM',
@@ -112,7 +86,7 @@ const verifiedProjects = [
   },
   {
     id: 'learnhub-lms',
-    number: '05',
+    number: '04',
     name: 'LearnHub LMS',
     category: 'Full-Stack',
     roleTag: 'ONLINE LEARNING MANAGEMENT SYSTEM',
@@ -138,13 +112,13 @@ const verifiedProjects = [
   },
   {
     id: 'socialConnect',
-    number: '06',
+    number: '05',
     name: 'SocialConnect',
     category: 'Full-Stack',
     roleTag: 'MERN SOCIAL NETWORKING PLATFORM',
     shortDesc:
       'Modern MERN Stack social networking application with real-time user feeds, instant post and photo creation, threaded comments, double-tap animated likes, user profile galleries, follower connections, and private messaging.',
-    technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'Tailwind CSS'],
+    technologies: ['React 19', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Socket.io', 'JWT', 'GitHub Actions'],
     liveUrl: 'https://anji0522.github.io/socialConnect/',
     githubUrl: 'https://github.com/Anji0522/socialConnect',
     status: 'Production Live & Deployed',
@@ -155,7 +129,7 @@ const verifiedProjects = [
     codeScore: '4.8',
     reliabilityScore: '99.8%',
     highlights: [
-      'Dynamic feed with real-time post publication and image uploads',
+      'Dynamic feed with real-time post publication, captions, and photo uploads',
       'Double-tap like animations, comment threads, and post bookmarking',
       'User profile management with bio, avatar customization, and follower graph',
       'Automated GitHub Actions CI/CD deploying directly to GitHub Pages'
@@ -164,7 +138,7 @@ const verifiedProjects = [
   },
   {
     id: 'JobbyApp',
-    number: '07',
+    number: '06',
     name: 'JobbyApp',
     category: 'Frontend',
     roleTag: 'REACT JOB DISCOVERY PLATFORM',
@@ -190,7 +164,7 @@ const verifiedProjects = [
   },
   {
     id: 'NxtWatch',
-    number: '08',
+    number: '07',
     name: 'Nxt Watch',
     category: 'Frontend',
     roleTag: 'VIDEO STREAMING & MEDIA PLATFORM',
@@ -216,7 +190,7 @@ const verifiedProjects = [
   },
   {
     id: 'bookhub',
-    number: '09',
+    number: '08',
     name: 'Book Hub',
     category: 'Frontend',
     roleTag: 'BOOK DISCOVERY & READING SHELF',
@@ -242,7 +216,7 @@ const verifiedProjects = [
   },
   {
     id: 'twitterNodeJS',
-    number: '10',
+    number: '09',
     name: 'Twitter Clone — Backend REST API',
     category: 'AI & Backend',
     roleTag: 'SECURE BACKEND REST SERVICE',
@@ -268,7 +242,7 @@ const verifiedProjects = [
   },
   {
     id: 'siddam-anjaiah-portfolio',
-    number: '11',
+    number: '10',
     name: 'Creative Agency Portfolio',
     category: 'Full-Stack',
     roleTag: 'LUXURY CREATIVE DEVELOPER PORTFOLIO',
@@ -317,7 +291,7 @@ const LuxuryProjects = () => {
             CURATED <span className="gold-text">PROJECTS & REPOSITORIES.</span>
           </h2>
           <p className="editorial-subtitle">
-            A verified showcase of all public repositories, production-ready full-stack applications, and AI architectures built by Siddam Anjaiah. Ranked and rated by engineering rigor, architectural complexity, and code quality.
+            A verified showcase of all 10 public repositories and production-ready applications built by Siddam Anjaiah. Ranked and rated by engineering rigor, architectural complexity, and code quality.
           </p>
         </div>
 
@@ -522,10 +496,10 @@ const LuxuryProjects = () => {
         {/* View All Repositories on GitHub Banner */}
         <div className="projects-github-cta-strip">
           <div className="github-cta-info">
-            <span className="cta-strip-tag">11 VERIFIED PUBLIC REPOSITORIES</span>
+            <span className="cta-strip-tag">10 VERIFIED PUBLIC REPOSITORIES</span>
             <h4 className="cta-strip-heading">LOOKING FOR ALL REPOSITORIES & SOURCE CODE?</h4>
             <p className="cta-strip-sub">
-              Explore ServiceNest, MobiVerse India, AI Engineering Problems, Expense Tracker, LearnHub LMS, SocialConnect, JobbyApp, Nxt Watch, Book Hub, Twitter Clone, and more on GitHub.
+              Explore ServiceNest, AI Engineering Problems, Expense Tracker, LearnHub LMS, SocialConnect, JobbyApp, Nxt Watch, Book Hub, Twitter Clone, and Creative Portfolio on GitHub.
             </p>
           </div>
           <a
